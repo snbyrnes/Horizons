@@ -4,7 +4,7 @@
     <title>Horizons: medication safety in digital systems</title>
     <link>https://snbyrnes.github.io/Horizons/</link>
     <description>Medication safety alerts involving digital systems, collated from regulators, safety organisations and standards bodies worldwide.</description>
-    <lastBuildDate>Sun, 22 Nov 2026 22:48:26 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 22:50:00 GMT</lastBuildDate>
     <item>
       <title>PubMed: Medication Safety Risks Associated With Inappropriate Use of Non-Crushable Tablets in Enterally Fed Patients: A Nationwide Cohort Study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/43018084/</link>
@@ -163,14 +163,6 @@
       <guid isPermaLink="false">a5d1746fb99657</guid>
       <pubDate>Fri, 30 Oct 2026 12:00:00 GMT</pubDate>
       <description>Glucose Meter</description>
-      <category>Infusion pumps and connected devices</category>
-    </item>
-    <item>
-      <title>FDA MedWatch: Hospital Glucose Meter Correction: Nova Biomedical Updates Use Instructions for StatStrip Glucose Hospital Meter Systems</title>
-      <link>http://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/hospital-glucose-meter-correction-nova-biomedical-updates-use-instructions-statstrip-glucose</link>
-      <guid isPermaLink="false">d3cc03417d6ec1</guid>
-      <pubDate>Fri, 30 Oct 2026 04:00:00 GMT</pubDate>
-      <description>Update use instructions for StatStrip Glucose Hospital Meter Systems due to the potential for glucose results to be assigned to the incorrect patient.</description>
       <category>Infusion pumps and connected devices</category>
     </item>
     <item>
@@ -490,6 +482,14 @@
       <guid isPermaLink="false">066223eed1b8f6</guid>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <description>Frontiers in human neuroscience. Mei Q, Chen X</description>
+
+    </item>
+    <item>
+      <title>PubMed: MoTRANet: Safety-Aware Drug Recommendation via Molecular Representation Learning and Dynamic Patient Modeling.</title>
+      <link>https://pubmed.ncbi.nlm.nih.gov/42771613/</link>
+      <guid isPermaLink="false">077bbbcd6cbe2c</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <description>IEEE transactions on computational biology and bioinformatics. Jia P, Gao J, Sha J et al.</description>
 
     </item>
   </channel>
