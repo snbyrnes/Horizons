@@ -1,0 +1,66 @@
+name: Update alerts and deploy
+
+on:
+  schedule:
+    - cron: '17 */6 * * *' # every six hours, off the hour to avoid the scheduler rush
+  push:
+    branches: [main]
+    paths-ignore: ['public/data/**', 'public/feed.xml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+      - name: Fetch alerts
+        # A failed fetch must not block the deploy: the site is rebuilt from the last good data.
+        continue-on-error: true
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: npm run fetch
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data public/feed.xml
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Refresh alert data"
+            git pull --rebase --autostash origin main
+            git push
+          fi
+
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
