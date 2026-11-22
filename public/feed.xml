@@ -4,15 +4,7 @@
     <title>Horizons: medication safety in digital systems</title>
     <link>https://snbyrnes.github.io/Horizons/</link>
     <description>Medication safety alerts involving digital systems, collated from regulators, safety organisations and standards bodies worldwide.</description>
-    <lastBuildDate>Sun, 22 Nov 2026 22:51:28 GMT</lastBuildDate>
-    <item>
-      <title>PubMed: Medication Safety Risks Associated With Inappropriate Use of Non-Crushable Tablets in Enterally Fed Patients: A Nationwide Cohort Study.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43018084/</link>
-      <guid isPermaLink="false">2ea421087ba707</guid>
-      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
-      <description>Quality management in health care. Wang FL, Shih RL, Wang KH et al.</description>
-
-    </item>
+    <lastBuildDate>Sun, 22 Nov 2026 23:14:45 GMT</lastBuildDate>
     <item>
       <title>HSSIB: Procurement, usability and adoption of ‘smart’ infusion pumps</title>
       <link>https://www.hssib.org.uk/patient-safety-investigations/procurement-usability-and-adoption-of-smart-infusion-pumps/</link>
@@ -20,46 +12,6 @@
       <pubDate>Fri, 20 Nov 2026 22:15:07 GMT</pubDate>
       <description>Although the aim of smart infusion pumps is to improve patient safety, the technology can introduce new risks. This investigation focused on understanding the challenges involved in introducing smart infusion pump technology within NHS hospitals.</description>
       <category>Infusion pumps and connected devices</category>
-    </item>
-    <item>
-      <title>ISO: ISO/DTS 19844-1.2 - Health informatics — Identification of medicinal products (IDMP) — Part 1: Implementation of ISO 11238 (general)</title>
-      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/98/89876.html</link>
-      <guid isPermaLink="false">4691466f40ce07</guid>
-      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
-      <description>This document reached stage 50.00 on 2026-11-19, TC/SC: ISO/TC 215/SC 2, ICS: 35.240.80</description>
-      <category>Data, terminology and interoperability</category>
-    </item>
-    <item>
-      <title>PubMed: Use of Synchronous, Interruptive Electronic Health Record-Embedded Medication Alerts to Improve Evidence-Based Medication Prescribing: Randomized Comparative Effectiveness Trial of Two Prescriber Alerts.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43056715/</link>
-      <guid isPermaLink="false">e1033245c7dd5e</guid>
-      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
-      <description>Journal of medical Internet research. Barnes G, Choi SY, Errickson J et al.</description>
-      <category>Electronic health records</category>
-    </item>
-    <item>
-      <title>PubMed: Clinical and operational practices to facilitate safe medication use in the care of hospitalized patients with pulmonary arterial hypertension.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43050590/</link>
-      <guid isPermaLink="false">6f393538ad3db8</guid>
-      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
-      <description>American journal of health-system pharmacy : AJHP : official journal of the American Society of Health-System Pharmacists. Smith ZR, Kelly B, Guido M et al.</description>
-
-    </item>
-    <item>
-      <title>PubMed: Continuous AI-enabled patient-safety monitoring: a scoping review and operational framework for healthcare organisations.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43051925/</link>
-      <guid isPermaLink="false">6f4d5b7155ab66</guid>
-      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
-      <description>BMJ open quality. Edden Y, Beni SA, Gutkind A</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>PubMed: Toward standardised management of Oral Anticancer Agents: real-world evidence to inform technical standards and shared models of care.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43061551/</link>
-      <guid isPermaLink="false">c0e56b329bd592</guid>
-      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
-      <description>Journal of pharmaceutical policy and practice. Zorzetto G, Moretto E, Simoni S et al.</description>
-
     </item>
     <item>
       <title>HSSIB: Electronic prescribing and medicines administration systems and safe discharge</title>
@@ -70,427 +22,442 @@
       <category>Electronic prescribing</category>
     </item>
     <item>
-      <title>ISO: ISO/DIS 11238 - Health informatics — Identification of medicinal products — Data elements and structures for the unique identification and exchange of regulated information on substances</title>
-      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/85/88547.html</link>
-      <guid isPermaLink="false">cc4878bae30497</guid>
-      <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
-      <description>This document reached stage 40.99 on 2026-11-17, TC/SC: ISO/TC 215/SC 2, ICS: 35.240.80</description>
-      <category>Data, terminology and interoperability</category>
+      <title>Läkemedelsverket: Gemensam övning ska stärka beredskapen vid läkemedelsbrist</title>
+      <link>https://www.lakemedelsverket.se/link/0a6769a2879640aca7be360b83932bc9.aspx</link>
+      <guid isPermaLink="false">3000e5ee80018e</guid>
+      <pubDate>Tue, 03 Nov 2026 06:53:54 GMT</pubDate>
+      <description>Hur kan myndigheter och företag tillsammans upprätthålla läkemedelsförsörjningen när det till exempel sker cyberangrepp, sjukvården är hårt belastad och krig bryter ut i Sveriges närområde? Det var delar av scenariot när ett trettiotal deltagare samlades i Uppsala den 21–‍22 oktober för att öva krisledning, samverkan och kommunikation. Övningen omfattade läkemedel för både människor och djur.</description>
+      <category>Software, apps and cybersecurity</category>
     </item>
     <item>
-      <title>PubMed: Enhancing anesthesiology medication safety and security through implementation of an automated dispensing system in a multihospital health system.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43023227/</link>
-      <guid isPermaLink="false">9a6262aa1d7446</guid>
-      <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
-      <description>American journal of health-system pharmacy : AJHP : official journal of the American Society of Health-System Pharmacists. Dunworth BA, Dickert AB, Houser A et al.</description>
-      <category>Automated dispensing and compounding</category>
+      <title>Drug Safety Update: #MedSafetyWeek (2 to 8 November 2026): Don&apos;t ignore suspected side effects, report them! Updates to the Yellow Card website and app</title>
+      <link>https://www.gov.uk/drug-safety-update/number-medsafetyweek-2-to-8-november-2026-dont-ignore-suspected-side-effects-report-them-updates-to-the-yellow-card-website-and-app</link>
+      <guid isPermaLink="false">5052d3737d897f</guid>
+      <pubDate>Mon, 26 Oct 2026 14:16:31 GMT</pubDate>
+      <description>The annual #MedSafetyWeek campaign is taking place from 2 to 8 November 2026 to promote the importance of reporting side effects from medicines and medical device incidents. This year&apos;s theme is ‘Side effects: don&apos;t ignore them, report them!’</description>
+      <category>Software, apps and cybersecurity</category>
     </item>
     <item>
-      <title>PubMed: Integrating ChatGPT into Pharmacology Simulation: A Structured Framework for Prescribing and Medication-Safety Education - A Narrative Review.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43023367/</link>
-      <guid isPermaLink="false">1b116684fdfae2</guid>
-      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
-      <description>Current drug safety. Al Rashid S, Ganesan N, Eswaran BK et al.</description>
-      <category>AI and machine learning</category>
+      <title>MHRA (Class 4): Class 4 Medicines Defect Notification: Martindale Pharmaceuticals Ltd, Clobazam Martindale Pharma 5 mg/5 mL and 10 mg/5 mL Oral Suspension 150ml, EL(26)A/38</title>
+      <link>https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-martindale-pharmaceuticals-ltd-clobazam-martindale-pharma-5-mg-slash-5-ml-and-10-mg-slash-5-ml-oral-suspension-150ml-el-26-a-slash-38</link>
+      <guid isPermaLink="false">823ae0395091a3</guid>
+      <pubDate>Thu, 17 Sep 2026 11:59:22 GMT</pubDate>
+      <description>Martindale Pharmaceuticals has informed the MHRA of an error with the linear barcode of some batches of Clobazam 5mg/5mL and 10mg/5mL Oral Suspension 150mL.</description>
+      <category>Barcode and scanning</category>
     </item>
     <item>
-      <title>PubMed: Shifting patterns in clinical pharmacy interventions associated with the integration of a clinical decision support system: A retrospective pre-post study in Brazil.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43019328/</link>
-      <guid isPermaLink="false">4a4b2406282a5e</guid>
-      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
-      <description>PloS one. Santos TLC, Baruel Okumura PC, Morinaga CV et al.</description>
-      <category>Decision support and alerts</category>
-    </item>
-    <item>
-      <title>PubMed: Opioid Stockout and Delayed Strong-Opioid Initiation in Suspected Advanced Malignancy at an Island Secondary Hospital: A Case Report.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43042240/</link>
-      <guid isPermaLink="false">9495be590c1b68</guid>
-      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
-      <description>International medical case reports journal. Rebecca MC, Priambodo AP, Anna A</description>
-
-    </item>
-    <item>
-      <title>PubMed: A learning pharmacovigilance system for frail patients: integrating real-world data, artificial intelligence, clinical pharmacology and medicines optimization to prevent medication-related harm.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43013403/</link>
-      <guid isPermaLink="false">af6ead9fdb26a8</guid>
-      <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
-      <description>Expert opinion on drug safety. Russo E, Leo A, Roberti R et al.</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>PubMed: [Translated article] Implementation of safe practices for the use of high-risk medications in Spanish hospitals.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43003748/</link>
-      <guid isPermaLink="false">03a8b4a604671c</guid>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
-      <description>Farmacia hospitalaria : organo oficial de expresion cientifica de la Sociedad Espanola de Farmacia Hospitalaria. Otero MJ, Prieto-Santos N, Martín Muñoz R et al.</description>
-
-    </item>
-    <item>
-      <title>PubMed: Advancing Operational Efficiency, Accuracy and Service Delivery through Robotic Dispensing Automation: A Quasi-Experimental Study in Retail Pharmacies in Argentina.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42986689/</link>
-      <guid isPermaLink="false">03b9e74f523992</guid>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
-      <description>JMIR human factors. Basile K, Lucaci J, Goldblatt CM et al.</description>
-      <category>Automated dispensing and compounding</category>
-    </item>
-    <item>
-      <title>PubMed: Using a Living Lab to Refine an Electronic Prescribing Workflow: Insights From the eRIKA Project.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42970788/</link>
-      <guid isPermaLink="false">c51a0f1a6634b9</guid>
-      <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
-      <description>JMIR formative research. Poppe A, Gruen E, Butz C et al.</description>
-      <category>Electronic prescribing</category>
-    </item>
-    <item>
-      <title>PubMed: Nurse-Led Interventions to Mitigate High-Alert Medication Errors in Critical Care: A Systematic Review of Effectiveness and Implementation Strategies.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42885876/</link>
-      <guid isPermaLink="false">471da3d41ad188</guid>
-      <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
-      <description>Nursing in critical care. Norouzdamghani M, Kasaeian G, Asgharipoor Y et al.</description>
-
-    </item>
-    <item>
-      <title>PubMed: REWARD-an open-source framework for identifying the unknown benefits of existing medications to inform drug discovery, development, and repurposing.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42562768/</link>
-      <guid isPermaLink="false">f3bfccd511f8cb</guid>
-      <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
-      <description>Journal of the American Medical Informatics Association : JAMIA. Kern DM, Bohn J, Gilbert JP et al.</description>
-
-    </item>
-    <item>
-      <title>FDA Devices: Hospital Glucose Meter Correction: Nova Biomedical Updates Use Instructions for StatStrip Glucose Hospital Meter Systems</title>
-      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/hospital-glucose-meter-correction-nova-biomedical-updates-use-instructions-statstrip-glucose</link>
-      <guid isPermaLink="false">a5d1746fb99657</guid>
-      <pubDate>Fri, 30 Oct 2026 12:00:00 GMT</pubDate>
-      <description>Glucose Meter</description>
+      <title>FDA Software recalls: Device recall: Baxter Novum IQ Syringe Pump, Model Number 40800BAXUS</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=221856</link>
+      <guid isPermaLink="false">2e3b67d4113ed6</guid>
+      <pubDate>Mon, 31 Aug 2026 12:00:00 GMT</pubDate>
+      <description>Baxter Healthcare Corporation. A software issue that may occur during a Volume/Time (VOT) multi-syringe infusion when a syringe reaches empty and is replaced while a Volume To Be Infused (VTBI) remains. Root cause: Software design.</description>
       <category>Infusion pumps and connected devices</category>
-    </item>
-    <item>
-      <title>PubMed: [Translated article] Farmastock: A collaborative tool for the reuse of high-cost hospital medications in a public healthcare system.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42957487/</link>
-      <guid isPermaLink="false">94893aa0af9c74</guid>
-      <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Farmacia hospitalaria : organo oficial de expresion cientifica de la Sociedad Espanola de Farmacia Hospitalaria. Gallego-Galisteo M, Romero-Puerto J, López-Mancha MT et al.</description>
-
-    </item>
-    <item>
-      <title>PubMed: Improving Medication Safety for Patients with Adrenal Insufficiency Using Electronic Health Record Optimization.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42953901/</link>
-      <guid isPermaLink="false">0857466de029ec</guid>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Pediatric quality &amp; safety. Gupta M, Huang A, Ness K et al.</description>
-      <category>Electronic health records</category>
-    </item>
-    <item>
-      <title>PubMed: Pediatric psychotropic prescribing and polypharmacy, 2019-2022: a retrospective electronic health record study in Qatar.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43017114/</link>
-      <guid isPermaLink="false">289f7a0a8d996c</guid>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Frontiers in psychiatry. Abo El-Ella DM, Dhieb D, Kanan Y et al.</description>
-      <category>Electronic health records</category>
-    </item>
-    <item>
-      <title>PubMed: Multi-label auxiliary decision-making model for pharmacotherapy of ischemic stroke based on BR-SA-LightGBM using real-world electronic medical records.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/43011034/</link>
-      <guid isPermaLink="false">cb23618bd5a5c1</guid>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Frontiers in medicine. Chen Y, Rui C, Mu S et al.</description>
-      <category>Electronic health records</category>
-    </item>
-    <item>
-      <title>PubMed: Decreasing Controlled Substance Variances in an Adult Emergency Department.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42944650/</link>
-      <guid isPermaLink="false">707ea8b5c14346</guid>
-      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Journal of emergency nursing. Hodski N, Fitzpatrick S, Duke K</description>
-
-    </item>
-    <item>
-      <title>PubMed: Optimizing drug utilization review alerts and clinical decision support in community pharmacy.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42927848/</link>
-      <guid isPermaLink="false">541d57a7984a13</guid>
-      <pubDate>Sun, 25 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Journal of the American Pharmacists Association : JAPhA. Lipp G, Szabatura AH, Praysman H et al.</description>
-      <category>Decision support and alerts</category>
-    </item>
-    <item>
-      <title>PubMed: Adherence to the Age-Friendly Care 4Ms Framework and Association with Reduced Acute Care Utilization.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42904683/</link>
-      <guid isPermaLink="false">4c6a4ac3424e0b</guid>
-      <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
-      <description>NEJM catalyst innovations in care delivery. Pan AP, Yadav P, Diraoui H et al.</description>
-
-    </item>
-    <item>
-      <title>PubMed: Artificial intelligence in breast cancer pharmacotherapy: Treatment optimization, medication safety, and the evolving role of oncology pharmacists.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42907964/</link>
-      <guid isPermaLink="false">8d1142adeb7019</guid>
-      <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Journal of oncology pharmacy practice : official publication of the International Society of Oncology Pharmacy Practitioners. Abuzaid AAA</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>PubMed: Artificial Intelligence in Pharmacy Services: A Comparative Bibliometric Analysis of United States and Global Research Trends.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42902889/</link>
-      <guid isPermaLink="false">16df0341541ac3</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Journal of patient safety. Hao C, Fu S</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>ISO: ISO/DTS 22039 - Health informatics — Generic model for bridging care provider processes and prescribed self-care process</title>
-      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/85/88556.html</link>
-      <guid isPermaLink="false">26889ac2e37e48</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-      <description>This document reached stage 50.00 on 2026-10-20, TC/SC: ISO/TC 215, ICS: 11.020.10; 35.240.80</description>
-      <category>Data, terminology and interoperability</category>
-    </item>
-    <item>
-      <title>PubMed: Trigger-first large language model-assisted adverse drug reaction surveillance: A pharmacist-supervised retrospective cohort study.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42959829/</link>
-      <guid isPermaLink="false">f2505267011985</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Exploratory research in clinical and social pharmacy. Liao C, Lai X, Chen W et al.</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>PubMed: Relationship extraction for adverse drug events in clinical notes using large language models: a retrospective cross-sectional study.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42892212/</link>
-      <guid isPermaLink="false">b213cef15ddd19</guid>
-      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
-      <description>EBioMedicine. Plasek JM, Li Y, Amato MG et al.</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>PubMed: Patterns of Antibiotic Prescribing for Pediatric Urinary Tract Infections in Ambulatory Care Centers: A Scoping Review.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42891660/</link>
-      <guid isPermaLink="false">cc19c22e927527</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Journal of pediatric health care : official publication of National Association of Pediatric Nurse Associates &amp; Practitioners. Bush J, Lee J</description>
-
-    </item>
-    <item>
-      <title>PubMed: Artificial intelligence for medication recognition and safety: a systematic review of detection, classification, OCR, and digital health applications.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42959385/</link>
-      <guid isPermaLink="false">88a3d8b4f4d45c</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Frontiers in digital health. Sai Sachin A, Karthikeyan J</description>
       <category>Software, apps and cybersecurity</category>
-      <category>AI and machine learning</category>
     </item>
     <item>
-      <title>PubMed: Implementing Taiwan National Health Insurance Quality Indicators as Clinical Quality Language on Fast Healthcare Interoperability Resources: Development and Feasibility Study.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42879772/</link>
-      <guid isPermaLink="false">ad506b573bdcf6</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
-      <description>JMIR medical informatics. Chen MC, Pei YC, Lin KJ et al.</description>
-      <category>Data, terminology and interoperability</category>
+      <title>FDA Software recalls: Device recall: Baxter Novum IQ Syringe Pump, Loaner, Model Number 40800BAXUSL</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=221857</link>
+      <guid isPermaLink="false">3bb51e34cada3f</guid>
+      <pubDate>Mon, 31 Aug 2026 12:00:00 GMT</pubDate>
+      <description>Baxter Healthcare Corporation. A software issue that may occur during a Volume/Time (VOT) multi-syringe infusion when a syringe reaches empty and is replaced while a Volume To Be Infused (VTBI) remains. Root cause: Software design.</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
     </item>
     <item>
-      <title>PubMed: Electronic prescribing: Implementation of a new approach to undergraduate teaching and assessment.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42876273/</link>
-      <guid isPermaLink="false">c78dd8c179ee44</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
-      <description>British journal of clinical pharmacology. Mitha H, Wilson K, Caffrey J et al.</description>
+      <title>ECRI and ISMP: Your Reports at Work: Fresenius Kabi Morphine Recall</title>
+      <link>https://home.ecri.org/blogs/guidance-insights-tools/your-reports-at-work-fresenius-kabi-morphine-recall</link>
+      <guid isPermaLink="false">631af883192d9a</guid>
+      <pubDate>Wed, 12 Aug 2026 14:18:06 GMT</pubDate>
+      <description>Our July 30, 2026 article, Morphine 2 mg/mL Prefilled Syringes Contain HYDROmorphone 0.5 mg/0.5 mL, discussed how a nurse removed a prefilled syringe of what they thought was morphine 2 mg/mL from an automated dispensing cabinet (ADC) and identified that while the syringe packaging contained a tamper-evident seal labeled “Morphine 2 mg/mL,” the syringe was labeled DILAUDID (HYDROmorphone) 0.5 mg/0.5 mL. The hospital…</description>
+      <category>Automated dispensing and compounding</category>
+    </item>
+    <item>
+      <title>ECRI and ISMP: Morphine 2 mg/mL Prefilled Syringes Contain HYDROmorphone 0.5 mg/0.5 mL!</title>
+      <link>https://home.ecri.org/blogs/guidance-insights-tools/morphine-2-mg-ml-prefilled-syringes-contain-hydromorphone-0-5-mg-0-5-ml</link>
+      <guid isPermaLink="false">596f6946d4c29f</guid>
+      <pubDate>Thu, 30 Jul 2026 04:00:00 GMT</pubDate>
+      <description>A nurse removed a prefilled syringe of what they thought was morphine 2 mg/mL from an automated dispensing cabinet (ADC). The nurse identified that while the syringe packaging contained a tamper-evident seal labeled “Morphine 2 mg/mL,” the syringe was labeled DILAUDID (HYDROmorphone) 0.5 mg/0.5 mL (Figure 1). The nurse escalated this concern to pharmacy, and a total of 6 prefilled syringes with similar mismatched…</description>
+      <category>Automated dispensing and compounding</category>
+    </item>
+    <item>
+      <title>Infoway: Canada Health Infoway Welcomes the Government of Québec’s Continued Commitment to ePrescribing in the Province</title>
+      <link>https://www.infoway-inforoute.ca/en/news-events/announcements/news/2026-announcements/canada-health-infoway-welcomes-the-government-of-quebecs-continued-commitment-to-eprescribing-in-the-province</link>
+      <guid isPermaLink="false">d87793d1153617</guid>
+      <pubDate>Fri, 17 Jul 2026 15:05:47 GMT</pubDate>
+      <description>Toronto, ON — July 17, 2026 — Canada Health Infoway is pleased to support the Government of Québec, Santé Québec and their partners as they continue the rollout of Prescription Québec, an initiative that enables prescribers to transmit medication prescriptions and related clinical information electronically and securely to community pharmacists.</description>
       <category>Electronic prescribing</category>
     </item>
     <item>
-      <title>PubMed: [Appropriateness of strong opioid prescribing chronic non-cancer pain in primary care: a cross-sectional study].</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42874373/</link>
-      <guid isPermaLink="false">d7b7491c0232ba</guid>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Atencion primaria. Díaz-Piñeiro J, González-González JI, Infante-Peralta EB et al.</description>
-
-    </item>
-    <item>
-      <title>PubMed: Robotic Process Automation as an EHR Reliability Layer for Inpatient Care Gaps: Automating Virtual Huddles Using Secure Chat.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42869090/</link>
-      <guid isPermaLink="false">44c51228ba6902</guid>
-      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Applied clinical informatics. Silberlust J, Martinez TR, Andreadis K et al.</description>
-      <category>Electronic health records</category>
-    </item>
-    <item>
-      <title>PubMed: Mapping pharmacist roles across the chimeric antigen receptor T-cell therapy care continuum: A scoping review.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42869294/</link>
-      <guid isPermaLink="false">fffe7faab9ef0d</guid>
-      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Journal of the American Pharmacists Association : JAPhA. Shrestha S, Pathak N, Acharya A et al.</description>
-
-    </item>
-    <item>
-      <title>PubMed: Artificial intelligence in pharmacy practice in the Middle East: a scoping review of applications, adoption, barriers, and future directions.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42920672/</link>
-      <guid isPermaLink="false">8304f1fa174199</guid>
-      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Frontiers in digital health. Alhomoud F</description>
-      <category>AI and machine learning</category>
+      <title>FDA Software recalls: Device recall: MiniMed 780G Insulin Pump, REF: MMT-1885, MMT-1886, MMT-1895, MMT-1896</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=221053</link>
+      <guid isPermaLink="false">9be4ff5ffc1ad5</guid>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Medtronic MiniMed, Inc.. A software anomaly can occur when the pump is paired with the Instinct sensor. Under certain circumstances, the pump unexpectedly stops delivering insulin and displays two error messages back-to-back: Pump Error 53 followed immediately by Pump Error 23. Insulin delivery will stop which may lead to delayed therapy and an increased risk of hyperglycemia or diabetic ketoacidosis (DKA). Root…</description>
+      <category>Infusion pumps and connected devices</category>
       <category>Software, apps and cybersecurity</category>
     </item>
     <item>
-      <title>ISO: ISO/TS 20443 - Health informatics — Identification of medicinal products — Implementation for ISO 11615 data elements and structures for the unique identification and exchange of regulated medicinal product information</title>
-      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/64/86406.html</link>
-      <guid isPermaLink="false">c5e837fa0ee296</guid>
-      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-      <description>This document reached stage 60.00 on 2026-10-09, TC/SC: ISO/TC 215, ICS: 35.240.80</description>
-      <category>Data, terminology and interoperability</category>
+      <title>HSSIB: Online prescribing: challenges and opportunities to improve patient safety</title>
+      <link>https://www.hssib.org.uk/patient-safety-investigations/online-prescribing-challenges-and-opportunities-to-improve-patient-safety/</link>
+      <guid isPermaLink="false">dcf5c2cb4583c4</guid>
+      <pubDate>Wed, 24 Jun 2026 23:01:00 GMT</pubDate>
+      <description>This investigation looks at the complex regulatory landscape around independent online prescribing and challenges sharing patient information between the NHS and independent online prescribing services.</description>
+      <category>Telehealth and online supply</category>
     </item>
     <item>
-      <title>PubMed: The sociomateriality of prescribing feedback interventions: A scoping review.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42836784/</link>
-      <guid isPermaLink="false">57cf1db7b081b4</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Medical education. Mattick K, Corrales AG, Carrieri D et al.</description>
-
+      <title>MHRA (Class 4): Class 4 Medicines Defect Notification: Cadila Pharmaceuticals Limited, Mirtazapine 30mg Tablets, EL(26)A/28</title>
+      <link>https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-cadila-pharmaceuticals-limited-mirtazapine-30mg-tablets-el-26-a-slash-28</link>
+      <guid isPermaLink="false">2bf3edbc718b7c</guid>
+      <pubDate>Mon, 08 Jun 2026 10:02:33 GMT</pubDate>
+      <description>Cadila Pharmaceuticals Limited has informed the MHRA of an error with the European Article Number (EAN) barcode on the cartons of a batch of Mirtazapine 30mg Film-Coated Tablets distributed in Crescent Pharma Limited livery.</description>
+      <category>Barcode and scanning</category>
     </item>
     <item>
-      <title>PubMed: Comprehension of an artificial intelligence-generated discharge letter versus a traditional discharge letter: two controlled quasi-experimental parallel-group studies.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42730664/</link>
-      <guid isPermaLink="false">8aba158a55ad8b</guid>
-      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
-      <description>International journal for quality in health care : journal of the International Society for Quality in Health Care. Bert F, Rosset L, Conrado F et al.</description>
-      <category>AI and machine learning</category>
+      <title>FDA Software recalls: Device recall: Plum Duo Infusion Pump, 40002-0401</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=220057</link>
+      <guid isPermaLink="false">e47d0eaf67b106</guid>
+      <pubDate>Fri, 05 Jun 2026 12:00:00 GMT</pubDate>
+      <description>ICU Medical, Inc.. Under certain conditions, the pump may not display a soft limit alert, and will not notify the clinician of a soft limit violation before confirming and starting delivery. This may potentially lead to under- or over-delivery. Root cause: Software Design Change.</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
     </item>
     <item>
-      <title>PubMed: A Narrative Review of Medication Optimisation in Older Adults with Polypharmacy: From Structured Medication Review to AI-Enabled Medication Safety.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42881678/</link>
-      <guid isPermaLink="false">3b11606a120a16</guid>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Healthcare (Basel, Switzerland). Aro R, Wojszel ZB, Duez P et al.</description>
-
+      <title>FDA Software recalls: Device recall: LVP software of the Ivenix Infusion System (IIS); Product Code LVP-SW-0005.</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=220229</link>
+      <guid isPermaLink="false">ef1715c89e7211</guid>
+      <pubDate>Wed, 03 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Fresenius Kabi USA, LLC. Potential software anomaly that can cause the pump to report a false battery-health value (typically 69%) and trigger a battery-depletion alarm that will shut down the pump unless it is reconnected to AC mains power. Root cause: Software design (manufacturing process).</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
     </item>
     <item>
-      <title>PubMed: Performance of large language models in prescription review: a comparative study.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42889097/</link>
-      <guid isPermaLink="false">84d2b912e563d6</guid>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
-      <description>Frontiers in medicine. Huang C, Sun Y, Liu W</description>
-      <category>AI and machine learning</category>
+      <title>FDA Devices: Automated Compounding System Recall: Omnicell Removes Syringe Labels Used with the i.v.STATION Automated Compounding System</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/automated-compounding-system-recall-omnicell-removes-syringe-labels-used-ivstation-automated</link>
+      <guid isPermaLink="false">7c84e1d3a2b970</guid>
+      <pubDate>Thu, 21 May 2026 12:00:00 GMT</pubDate>
+      <description>Automated Compounding System</description>
+      <category>Automated dispensing and compounding</category>
+    </item>
+    <item>
+      <title>MHRA (Class 4): Class 4 Medicines Defect Notification: Quadrant Pharmaceuticals Limited, Vesomni 6 mg/0.4 mg modified release tablets , EL(26)A/16</title>
+      <link>https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-quadrant-pharmaceuticals-limited-vesomni-6-mg-slash-0-dot-4-mg-modified-release-tablets-el-26-a-slash-16</link>
+      <guid isPermaLink="false">c313a840e51b8d</guid>
+      <pubDate>Thu, 26 Mar 2026 10:02:07 GMT</pubDate>
+      <description>Quadrant Pharmaceuticals Limited have informed the MHRA that their parallel imported packs of Vesomni 6 mg/0.4 mg modified release tablets have been printed with the incorrect barcode/GTIN on the carton.</description>
+      <category>Barcode and scanning</category>
+    </item>
+    <item>
+      <title>FDA Devices: Infusion Pump Software Correction: Fresenius Kabi Issues Correction for Ivenix Large Volume Pump Software</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/infusion-pump-software-correction-fresenius-kabi-issues-correction-ivenix-large-volume-pump-software</link>
+      <guid isPermaLink="false">f145cbf20c9ccf</guid>
+      <pubDate>Wed, 25 Feb 2026 12:00:00 GMT</pubDate>
+      <description>Infusion Pump Software</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>Drug Safety Update: Falsified Mounjaro KwikPen 15mg pre-filled pens</title>
+      <link>https://www.gov.uk/drug-safety-update/falsified-mounjaro-kwikpen-15mg-pre-filled-pens</link>
+      <guid isPermaLink="false">330475f1afcbf0</guid>
+      <pubDate>Tue, 24 Feb 2026 14:00:08 GMT</pubDate>
+      <description>A falsified version of Mounjaro (tirzepatide) KwikPen 15mg solution for injection has been found supplied through one online pharmacy in the UK. The falsified product is labelled with batch D873576 and applies to Mounjaro KwikPen 15mg solution for injection in pre-filled pen only.</description>
+      <category>Telehealth and online supply</category>
     </item>
     <item>
       <title>ECRI and ISMP: Missed Recall Warnings: A Growing Safety Risk for Home Diabetes Device Users</title>
       <link>https://home.ecri.org/blogs/guidance-insights-tools/missed-recall-warnings-a-growing-safety-risk-for-home-diabetes-device-users</link>
       <guid isPermaLink="false">7e5f73515f48ac</guid>
-      <pubDate>Wed, 30 Sep 2026 12:27:02 GMT</pubDate>
+      <pubDate>Tue, 17 Feb 2026 11:00:05 GMT</pubDate>
       <description>Advances in home diabetes management technologies have transformed how millions of people manage their condition outside of traditional clinical settings. Devices such as insulin pumps, continuous glucose monitors (CGMs), and integrated systems that combine the two have enabled tighter glucose control, fewer manual interventions, and greater independence for patients. Closed-loop systems, in particular, represent a…</description>
       <category>Infusion pumps and connected devices</category>
     </item>
     <item>
-      <title>ISO: ISO/FDIS 11616 - Health informatics — Identification of medicinal products — Data elements and structures for unique identification and exchange of regulated pharmaceutical product information</title>
-      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/85/88550.html</link>
-      <guid isPermaLink="false">3152eeb2b6a0ed</guid>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-      <description>This document reached stage 50.00 on 2026-09-30, TC/SC: ISO/TC 215/SC 2, ICS: 35.240.80</description>
-      <category>Data, terminology and interoperability</category>
+      <title>Health Canada (Type III): Cefazolin for Injection: Affected lots are packaged with the incorrect Linear barcode on inner and outer bag labels. (Type III)</title>
+      <link>https://recalls-rappels.canada.ca/en/alert-recall/cefazolin-injection-affected-lots-are-packaged-incorrect-linear-barcode-inner-and</link>
+      <guid isPermaLink="false">6188321c58a87c</guid>
+      <pubDate>Mon, 09 Feb 2026 12:00:00 GMT</pubDate>
+      <description>CEFAZOLIN FOR INJECTION, USP. Labelling</description>
+      <category>Barcode and scanning</category>
     </item>
     <item>
-      <title>PubMed: AI-based clinical decision support systems for antibiotic therapy in common adult infections: a systematic review from development to clinical implementation.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42877213/</link>
-      <guid isPermaLink="false">42f9aef511ba23</guid>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Frontiers in digital health. Hueda-Zavaleta M, Flores-Palacios R, Bardales-Silva F et al.</description>
-      <category>Decision support and alerts</category>
-      <category>AI and machine learning</category>
-      <category>Software, apps and cybersecurity</category>
-    </item>
-    <item>
-      <title>PubMed: Responsible implementation of artificial intelligence across the medication-use process: an evidence-informed framework for medication safety.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42823282/</link>
-      <guid isPermaLink="false">888439805f0b15</guid>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Research in social &amp; administrative pharmacy : RSAP. Gobran Y</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>PubMed: Five Tools, One Patient: Toward a Common Output Standard for Periprocedural Anticoagulation Decision Support.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42800908/</link>
-      <guid isPermaLink="false">0140359c2611d8</guid>
-      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
-      <description>The Annals of pharmacotherapy. Carter EL</description>
-      <category>Decision support and alerts</category>
-    </item>
-    <item>
-      <title>PubMed: AI-enabled digital therapeutics in pharmacy practice: prescription software, medication optimization, safety surveillance, and future clinical positioning.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42779359/</link>
-      <guid isPermaLink="false">578c4d30dd7e8d</guid>
-      <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Expert review of clinical pharmacology. Zaman W, Ayaz A</description>
-      <category>Software, apps and cybersecurity</category>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>PubMed: Electronic prescribing and patient safety: a rigour-stratified systematic review of medication error, adverse drug events, workflow, and communication.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42840262/</link>
-      <guid isPermaLink="false">2178d5e29e398c</guid>
-      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Exploratory research in clinical and social pharmacy. Bhavana S, Patil S, Varshini RJ et al.</description>
-      <category>Electronic prescribing</category>
-    </item>
-    <item>
-      <title>PubMed: Generative Artificial Intelligence Utilization and Perspectives Among Reproductive-Age Women With Systemic Autoimmune and Rheumatic Diseases.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42788866/</link>
-      <guid isPermaLink="false">3949180dac92db</guid>
-      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Arthritis care &amp; research. Arif M, Wright C, Rodriguez S et al.</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>PubMed: A Quantifiable 3D Closed-Loop Framework for Controlled Substance Safety in a HIMSS Electronic Medical Record Adoption Model (EMRAM) Stage 7 Hospital: Pre-Post Quality Improvement Study.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42789927/</link>
-      <guid isPermaLink="false">4318d58533f7cf</guid>
-      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
-      <description>JMIR medical informatics. Sun N, Su J, Yu Q et al.</description>
-      <category>Electronic health records</category>
+      <title>FDA Software recalls: Device recall: ICU Medical Plum Duo Infusion Pump, List Numbers: 400020401 (US), 400021001 (Philippines)</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=217669</link>
+      <guid isPermaLink="false">1ef318bd687dde</guid>
+      <pubDate>Fri, 16 Jan 2026 12:00:00 GMT</pubDate>
+      <description>ICU Medical, Inc.. Plum Solo and Duo Infusion pumps include a feature, that when selected, automatically flushes the downstream line after a piggyback therapy. The programmed flush volume is delivered from the primary line container at the piggyback therapy rate after the piggyback therapy is complete. In certain cases, as described below, the clinician may receive an Upper Hard Limit (UHL) or Lower Hard Limit (LHL)…</description>
       <category>Infusion pumps and connected devices</category>
     </item>
     <item>
-      <title>PubMed: A pilot randomized controlled trial assessing the feasibility and preliminary effects of a text message intervention to promote secure storage and disposal of prescription opioids.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42854370/</link>
-      <guid isPermaLink="false">ab1fc03ec187f8</guid>
-      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Drug and alcohol dependence. Egan KL, Cox MJ, Helme DW et al.</description>
-
+      <title>FDA Software recalls: Device recall: ICU Medical Plum Solo Precision IV Pump, List Numbers: 400010401 (US), 400011001 (Philippines)</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=217671</link>
+      <guid isPermaLink="false">41ef3a338537a9</guid>
+      <pubDate>Fri, 16 Jan 2026 12:00:00 GMT</pubDate>
+      <description>ICU Medical, Inc.. Plum Solo and Duo Infusion pumps include a feature, that when selected, automatically flushes the downstream line after a piggyback therapy. The programmed flush volume is delivered from the primary line container at the piggyback therapy rate after the piggyback therapy is complete. In certain cases, as described below, the clinician may receive an Upper Hard Limit (UHL) or Lower Hard Limit (LHL)…</description>
+      <category>Infusion pumps and connected devices</category>
     </item>
     <item>
-      <title>PubMed: Impact of Medication-Related Problems in Hospitalized Patients Eligible for Palliative Care: A Prospective Cohort Study.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42785578/</link>
-      <guid isPermaLink="false">1d0cbdae3683b2</guid>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Journal of pain and symptom management. Rangel JG, Ribeiro MFC, Maure A et al.</description>
-
+      <title>FDA Software recalls: Device recall: ICU Medical Plum Duo Precision IV Pump, List Numbers: 400020403 (US), 400021003 (Philippines)</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=217670</link>
+      <guid isPermaLink="false">dc471fe57683db</guid>
+      <pubDate>Fri, 16 Jan 2026 12:00:00 GMT</pubDate>
+      <description>ICU Medical, Inc.. Plum Solo and Duo Infusion pumps include a feature, that when selected, automatically flushes the downstream line after a piggyback therapy. The programmed flush volume is delivered from the primary line container at the piggyback therapy rate after the piggyback therapy is complete. In certain cases, as described below, the clinician may receive an Upper Hard Limit (UHL) or Lower Hard Limit (LHL)…</description>
+      <category>Infusion pumps and connected devices</category>
     </item>
     <item>
-      <title>PubMed: RTSANet: learning sequential-attentive hybrid networks for drug information-enhanced medication recommendation.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42776859/</link>
-      <guid isPermaLink="false">5c3052ee12be63</guid>
-      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Computer methods in biomechanics and biomedical engineering. Zhang Y, Wang Z, Du S et al.</description>
-
+      <title>FDA Devices: Infusion Pump Software Recall: Baxter Removes Sigma Spectrum Infusion System Platforms</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/infusion-pump-software-recall-baxter-removes-sigma-spectrum-infusion-system-platforms</link>
+      <guid isPermaLink="false">5810e2fd20353e</guid>
+      <pubDate>Mon, 05 Jan 2026 12:00:00 GMT</pubDate>
+      <description>Infusion Pump Software</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
     </item>
     <item>
-      <title>PubMed: A Hybrid Rule-Based and Machine Learning-Based Clinical Decision Support System to Support Prescription Review: Development and External Validation Study.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42777235/</link>
-      <guid isPermaLink="false">765e753a2d10b9</guid>
-      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Journal of medical Internet research. Jeong J, Heo KN, Kim AJ et al.</description>
-      <category>Decision support and alerts</category>
-      <category>AI and machine learning</category>
+      <title>FDA Devices: Continuous Glucose Monitoring Software Correction: Dexcom Issues Correction for Dexcom G6 and G6 Pro</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/continuous-glucose-monitoring-software-correction-dexcom-issues-correction-dexcom-g6-and-g6-pro</link>
+      <guid isPermaLink="false">f66d969d58af19</guid>
+      <pubDate>Mon, 29 Dec 2025 12:00:00 GMT</pubDate>
+      <description>Continuous Glucose Monitoring Software</description>
+      <category>Software, apps and cybersecurity</category>
+      <category>Infusion pumps and connected devices</category>
     </item>
     <item>
-      <title>PubMed: Progress of nursing management for delirium in critically ill geriatric patients: a narrative review.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42840403/</link>
-      <guid isPermaLink="false">066223eed1b8f6</guid>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Frontiers in human neuroscience. Mei Q, Chen X</description>
-
+      <title>FDA Software recalls: Device recall: LifeShield Drug Library Management (DLM), LifeShield Infusion Safety Software Suite v2.2 Product No. 17003-02</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=217444</link>
+      <guid isPermaLink="false">9fa45e1460a2f1</guid>
+      <pubDate>Fri, 19 Dec 2025 12:00:00 GMT</pubDate>
+      <description>ICU Medical, Inc.. Software issue only allows Concentration Limits to be defined to one digit of precision past the decimal point (0.1) instead of three digits (0.001). If the user is unable to use Concentration Limits as intended, they may need to change the limits to something other than what is recommended by the drug manufacturer, which may result in over- or under-delivery. Root cause: Software Design Change.</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
     </item>
     <item>
-      <title>PubMed: MoTRANet: Safety-Aware Drug Recommendation via Molecular Representation Learning and Dynamic Patient Modeling.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42771613/</link>
-      <guid isPermaLink="false">077bbbcd6cbe2c</guid>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <description>IEEE transactions on computational biology and bioinformatics. Jia P, Gao J, Sha J et al.</description>
-
+      <title>FDA Software recalls: Device recall: LifeShield Drug Library Management (DLM); LifeShield Infusion Safety Software Suite v2.2 List Number 17003-02</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=217406</link>
+      <guid isPermaLink="false">fce88b17f27f0e</guid>
+      <pubDate>Fri, 19 Dec 2025 12:00:00 GMT</pubDate>
+      <description>ICU Medical, Inc.. For certain customers, the Change Summary review option ceases to operate as expected for any migrated library after the migration has been completed. Users must use alternate methods to review changes. Failure to do so may lead in over delivery, under delivery, or delay in setup on the infusion pump. Root cause: Software Design Change.</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Ivenix Infusion System (IIS), LVP Software LVP-SW-0005. Software for the controlled administration of fluids to patients.</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=217423</link>
+      <guid isPermaLink="false">6ccb2471f25dd0</guid>
+      <pubDate>Tue, 16 Dec 2025 12:00:00 GMT</pubDate>
+      <description>Fresenius Kabi USA, LLC. Software version 5.10.1 and earlier contain anomalies that have the potential to cause serious patient harm or death. Root cause: Software design.</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>HSSIB: Electronic patient record (EPR) systems – thematic review</title>
+      <link>https://www.hssib.org.uk/patient-safety-investigations/electronic-patient-record-epr-systems-thematic-review/</link>
+      <guid isPermaLink="false">340d0e858f5844</guid>
+      <pubDate>Thu, 27 Nov 2025 00:01:00 GMT</pubDate>
+      <description>We have completed a thematic review of 50 HSSIB reports to identify specific patient safety issues and learning related to electronic patient record (EPR) systems. The report includes a safety observation and local-level learning prompts around safe selection and procurement, implementation and ongoing optimisation of EPR systems.</description>
+      <category>Electronic health records</category>
+    </item>
+    <item>
+      <title>NHS England (National Patient Safety Alert): National patient safety alert – harm from incorrect recording of penicillin allergy as penicillamine allergy</title>
+      <link>https://www.england.nhs.uk/2025/11/harm-from-incorrect-recording-of-penicillin-allergy-as-penicillamine-allergy/</link>
+      <guid isPermaLink="false">e2a34c45a66a0e</guid>
+      <pubDate>Thu, 20 Nov 2025 10:00:32 GMT</pubDate>
+      <description>A joint National Patient Safety Alert has been issued by the NHS England National Patient Safety team, in collaboration with the Royal Pharmaceutical Society, Royal College of Physicians and Royal College of General Practitioners, about the risk of harm from inadvertently recording patients’ penicillin allergies as penicillamine allergies in electronic prescribing and medicines administration (EPMA) […]</description>
+      <category>Electronic prescribing</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Tandem Mobi Insulin Pump: Description/Catalog: Tandem insulin pumps are battery-operated infusion pumps capable of both basal and bolus delivery of…</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=216259</link>
+      <guid isPermaLink="false">e4e798b10f197b</guid>
+      <pubDate>Wed, 05 Nov 2025 12:00:00 GMT</pubDate>
+      <description>Tandem Diabetes Care, Inc.. Insulin pump includes a vibration motor that gives tactile feedback for any alerts, alarms, or malfunctions. Pump may exhibit false vibration motor failure due to a software issue causing Malfunction 12: &quot;Pump cannot operate, the mobile app can no longer receive data from the pump. Insulin delivery and any active CGM Sessions have been stopped&quot;, which could result in hyperglycemia. Root…</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: t:slim X2 insulin pump with Interoperable Technology, Control-IQ+ technology, REF: 1014070, 1014071, 1014072, 1014073, and User Guide when using…</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=215511</link>
+      <guid isPermaLink="false">ab9a0193aec065</guid>
+      <pubDate>Thu, 23 Oct 2025 12:00:00 GMT</pubDate>
+      <description>Tandem Diabetes Care, Inc.. A software defect in versions 7.9.0.1 and 7.10.1 of the pump software for Tandem t:slim X2 and version 7.9.0.1 of the Tandem Mobi pump with Control-IQ+ technology that are paired with a G7 sensor may result in an unexpected automatic insulin correction bolus (autobolus ) which could result in hypoglycemia. Root cause: Software change control.</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Data, terminology and interoperability</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: t:slim X2 Insulin Pump with Interoperable Technology (with Tandem t:slim mobile app)</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=215011</link>
+      <guid isPermaLink="false">69f7f32230321c</guid>
+      <pubDate>Wed, 24 Sep 2025 12:00:00 GMT</pubDate>
+      <description>Tandem Diabetes Care, Inc.. an app defect that occurs when the phone is set to a right-to-left language, which causes app-pump pairing issues and graphical defects, which can potentially lead to incorrect therapy decisions and subsequent hypoglycemia or hyperglycemia. Root cause: Software design.</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+      <category>Data, terminology and interoperability</category>
+    </item>
+    <item>
+      <title>FDA Devices: Continuous Glucose Monitor Apps Correction: Dexcom, Inc. Issues Correction for G7 Apps and ONE+ Apps due to a Software Design Error That Does Not Alert Users of Unexpected Sensor Failure</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/continuous-glucose-monitor-apps-correction-dexcom-inc-issues-correction-g7-apps-and-one-apps-due</link>
+      <guid isPermaLink="false">85b3a655695acc</guid>
+      <pubDate>Fri, 12 Sep 2025 12:00:00 GMT</pubDate>
+      <description>Glucose Monitors</description>
+      <category>Software, apps and cybersecurity</category>
+      <category>Infusion pumps and connected devices</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Novum IQ Syringe Pump, Product Code 40800BAXUS, infusion pump</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=215111</link>
+      <guid isPermaLink="false">26c61592a8ebfb</guid>
+      <pubDate>Fri, 29 Aug 2025 12:00:00 GMT</pubDate>
+      <description>Baxter Healthcare Corporation. Baxter Healthcare Corporation is issuing an Urgent Medical Device Correction for the Novum IQ Large Volume Pump (LVP) and Novum IQ Syringe Pump (SP) due to software anomalies that may result in a blank Run screen (LVP and SP) and/or false motor movement system error (SP only). Root cause: Software design (manufacturing process).</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Novum IQ LVP (Large Volume Pump), Product Code 40700BAXUS, infusion pump</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=215108</link>
+      <guid isPermaLink="false">efdcfe893e96e1</guid>
+      <pubDate>Fri, 29 Aug 2025 12:00:00 GMT</pubDate>
+      <description>Baxter Healthcare Corporation. Baxter Healthcare Corporation is issuing an Urgent Medical Device Correction for the Novum IQ Large Volume Pump (LVP) and Novum IQ Syringe Pump (SP) due to software anomalies that may result in a blank Run screen (LVP and SP) and/or false motor movement system error (SP only). Root cause: Software design (manufacturing process).</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Novum IQ Syringe Pump, Product Code 40700BAX, infusion pump</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=215482</link>
+      <guid isPermaLink="false">fe131d48319ff3</guid>
+      <pubDate>Fri, 29 Aug 2025 12:00:00 GMT</pubDate>
+      <description>Baxter Healthcare Corporation. Baxter Healthcare Corporation is issuing an Urgent Medical Device Correction for the Novum IQ Large Volume Pump (LVP) and Novum IQ Syringe Pump (SP) due to software anomalies that may result in a blank Run screen (LVP and SP) and/or false motor movement system error (SP only). Root cause: Software design (manufacturing process).</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Devices: Infusion Pump Correction: ICU Medical, Inc. Issues Correction for Plum Duo Infusion System Due to Software Possibly Resulting in Pump Becoming Unresponsive</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/infusion-pump-correction-icu-medical-inc-issues-correction-plum-duo-infusion-system-due-software</link>
+      <guid isPermaLink="false">e8d926ef3b35d8</guid>
+      <pubDate>Thu, 28 Aug 2025 12:00:00 GMT</pubDate>
+      <description>Infusion Pump</description>
+      <category>Infusion pumps and connected devices</category>
+    </item>
+    <item>
+      <title>ECRI and ISMP: Warning! Overwrap Labeled Potassium Chloride 10 mEq/ 100 mL May Contain Potassium Chloride 20 mEq/ 50 mL Premixed IV Bag</title>
+      <link>https://home.ecri.org/blogs/guidance-insights-tools/warning-overwrap-labeled-potassium-chloride-10-meq-100-ml-may-contain-potassium-chloride-20-meq-50-ml-premixed-iv-bag</link>
+      <guid isPermaLink="false">9657afb2c2876f</guid>
+      <pubDate>Thu, 28 Aug 2025 10:00:00 GMT</pubDate>
+      <description>A prescriber ordered a potassium chloride 10 mEq/100 mL infusion for a patient with a peripheral intravenous (IV) line. The nurse removed a bag from the automated dispensing cabinet (ADC) labeled potassium chloride 10 mEq/100 mL (NDC 0990-7074-26) by ICU Medical and scanned the barcode on the overwrap. The nurse opened the overwrap, read the infusion bag label, and identified that it was labeled potassium chloride…</description>
+      <category>Automated dispensing and compounding</category>
+      <category>Barcode and scanning</category>
+    </item>
+    <item>
+      <title>Infoway: Accuro Electronic Medical Record Platform is now Integrated with PrescribeIT, Canada’s National e-Prescribing Service</title>
+      <link>https://www.infoway-inforoute.ca/en/news-events/announcements/news/2025-announcements/accuro-electronic-medical-record-platform-is-now-integrated-with-prescribeit-canada-s-national-e-prescribing-service</link>
+      <guid isPermaLink="false">05edc03412114b</guid>
+      <pubDate>Fri, 22 Aug 2025 15:02:02 GMT</pubDate>
+      <description>August 22, 2025 (TORONTO) – Canada Health Infoway (Infoway) and QHR Technologies Inc are pleased to announce the successful integration of PrescribeIT® into Accuro®EMR, with sign up currently available in Ontario. The availability of PrescribeIT® in Accuro® EMR will expand into other jurisdictions over the coming months.</description>
+      <category>Electronic prescribing</category>
+      <category>Electronic health records</category>
+    </item>
+    <item>
+      <title>NSW Health: Intravenous immunoglobulin (IVIg) therapy - Documentation in the healthcare record</title>
+      <link>https://www.health.nsw.gov.au/sabs/Documents/2025-si-008.pdf</link>
+      <guid isPermaLink="false">93473bfe7de37e</guid>
+      <pubDate>Thu, 17 Jul 2025 12:00:00 GMT</pubDate>
+      <description>SI:008/25</description>
+      <category>Data, terminology and interoperability</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Omnipod 5 Automated Insulin Delivery System, iOS Application. Model Number: PT-000664/M009-S-AP. Software Version: all Product Description: The…</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=214077</link>
+      <guid isPermaLink="false">02996b9242e904</guid>
+      <pubDate>Tue, 24 Jun 2025 12:00:00 GMT</pubDate>
+      <description>Insulet Corporation. Insulet Corporation is recalling Omnipod 5 iOS App, due to a software design issue in which a comma is not recognized as a decimal separator and the user cannot enter a decimal separator in any manual entry screen if the user manually updates their phone settings to a region OUS that uses a decimal separator instead of a period decimal separator or chooses that format as a preference. Use of the…</description>
+      <category>Software, apps and cybersecurity</category>
+      <category>Infusion pumps and connected devices</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Bigfoot Unity Diabetes Management System SW-300689-01 Bigfoot Inject v1 Pen Cap LCAP Firmware 1.3.0 Release Configuration, Rev H SW-300689-02 Bigfoot…</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=214046</link>
+      <guid isPermaLink="false">2e3dcc42bc2bf2</guid>
+      <pubDate>Fri, 20 Jun 2025 12:00:00 GMT</pubDate>
+      <description>BIGFOOT BIOMEDICAL. Due to a software/firmware issue diabetes management system may provide a device error and cause the insulin pen to become unresponsive and unable to function. This error may pose a potential health risk for people living with diabetes as they may not have all information necessary to make a timely treatment decision. Root cause: Software design.</description>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Devices: Infusion Pump Recall: Zyno Medical Removes Certain Z-800 Series Infusion Pumps due to Software Issue</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/infusion-pump-recall-zyno-medical-removes-certain-z-800-series-infusion-pumps-due-software-issue</link>
+      <guid isPermaLink="false">d52a213e6b10a2</guid>
+      <pubDate>Mon, 16 Jun 2025 12:00:00 GMT</pubDate>
+      <description>Infusion Pump</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Z-800WF Infusion System. Intended to provide intravenous infusion of parenteral fluids, blood, and blood products to a patient.</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=213689</link>
+      <guid isPermaLink="false">285a3ff45a89d3</guid>
+      <pubDate>Fri, 06 Jun 2025 12:00:00 GMT</pubDate>
+      <description>Zyno Medical LLC. Unreleased software versions were installed on distributed devices without verification or validation. Root cause: Software design (manufacturing process).</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Z-800 Infusion System. Intended to provide intravenous infusion of parenteral fluids, blood, and blood products to a patient.</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=213681</link>
+      <guid isPermaLink="false">832fa6a8024e3d</guid>
+      <pubDate>Fri, 06 Jun 2025 12:00:00 GMT</pubDate>
+      <description>Zyno Medical LLC. Unreleased software versions were installed on distributed devices without verification or validation. Root cause: Software design (manufacturing process).</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Z-800W Infusion System. Intended to provide intravenous infusion of parenteral fluids, blood, and blood products to a patient.</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=213688</link>
+      <guid isPermaLink="false">acb1b21fdc84ac</guid>
+      <pubDate>Fri, 06 Jun 2025 12:00:00 GMT</pubDate>
+      <description>Zyno Medical LLC. Unreleased software versions were installed on distributed devices without verification or validation. Root cause: Software design (manufacturing process).</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Software recalls: Device recall: Z-800F Infusion System. Intended to provide intravenous infusion of parenteral fluids, blood, and blood products to a patient.</title>
+      <link>https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=213687</link>
+      <guid isPermaLink="false">e96a32ab7180ec</guid>
+      <pubDate>Fri, 06 Jun 2025 12:00:00 GMT</pubDate>
+      <description>Zyno Medical LLC. Unreleased software versions were installed on distributed devices without verification or validation. Root cause: Software design (manufacturing process).</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Devices: False Alarm Issue with Infusion Pump from Smiths Medical</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/infusion-pump-recall-false-alarm-issue-infusion-pump-smiths-medical</link>
+      <guid isPermaLink="false">9de7a1bbac8246</guid>
+      <pubDate>Tue, 03 Jun 2025 12:00:00 GMT</pubDate>
+      <description>Infusion Pump</description>
+      <category>Infusion pumps and connected devices</category>
+    </item>
+    <item>
+      <title>ECRI and ISMP: Guidelines for Safe Electronic Communication of Medication Information</title>
+      <link>https://home.ecri.org/blogs/guidance-insights-tools/guidelines-for-safe-electronic-communication-of-medication-information</link>
+      <guid isPermaLink="false">893866273be56e</guid>
+      <pubDate>Mon, 02 Jun 2025 04:00:00 GMT</pubDate>
+      <description>Strategies to safely present drug information in various electronic formats.More</description>
+      <category>Data, terminology and interoperability</category>
+    </item>
+    <item>
+      <title>FDA Devices: Infusion Pump Software Correction: Becton, Dickinson and Company (BD) Issues Correction for BD Alaris Systems Manager and Care Coordination Engine Infusion Adapter Software Due to Risk for Outdated Automated Programming Requests to Load</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/infusion-pump-software-correction-becton-dickinson-and-company-bd-issues-correction-bd-alaris</link>
+      <guid isPermaLink="false">939e89b32dc527</guid>
+      <pubDate>Thu, 20 Mar 2025 12:00:00 GMT</pubDate>
+      <description>Infusion Pump Software</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
+    </item>
+    <item>
+      <title>FDA Devices: Update on Alert: Infusion Pump Software Issue from Fresenius Kabi USA</title>
+      <link>https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/update-alert-infusion-pump-software-issue-fresenius-kabi-usa</link>
+      <guid isPermaLink="false">9b7e7ea1edb069</guid>
+      <pubDate>Wed, 05 Mar 2025 12:00:00 GMT</pubDate>
+      <description>Infusion Pump Software</description>
+      <category>Infusion pumps and connected devices</category>
+      <category>Software, apps and cybersecurity</category>
     </item>
   </channel>
 </rss>
