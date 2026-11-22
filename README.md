@@ -1,8 +1,8 @@
-# Horizon
+# Horizons
 
 Medication safety alerts from regulators, safety organisations, healthcare bodies and standards bodies worldwide, with a lens on **medication safety in digital systems** (ePrescribing, health records, decision support, infusion pumps, dispensing automation, barcoding, interoperability, software and AI).
 
-Horizon is a static site. A scheduled GitHub Actions job gathers the alerts, commits the refreshed data, and redeploys GitHub Pages. There is no server and no API key.
+Horizons is a static site. A scheduled GitHub Actions job gathers the alerts, commits the refreshed data, and redeploys GitHub Pages. There is no server and no API key.
 
 ## How it works
 
@@ -70,4 +70,4 @@ The build uses relative paths, so it works at `https://<user>.github.io/<repo>/`
 
 ## Important
 
-Horizon is a scanning aid. It links to original notices and does not replace them, and it is not a substitute for formal alerting channels such as a national central alerting system. Classification is automated and will sometimes be wrong.
+Horizons is a scanning aid. It links to original notices and does not replace them, and it is not a substitute for formal alerting channels such as a national central alerting system. Classification is automated and will sometimes be wrong.

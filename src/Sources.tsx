@@ -22,7 +22,7 @@ export function Sources({ data, now }: { data: Dataset; now: number }) {
     <article className="page">
       <h1>{data.sources.length} sources across {countries} countries and regions</h1>
       <p className="lede">
-        Horizon checks each of these every six hours. Last check finished {timeAgo(data.generatedAt, now)}
+        Horizons checks each of these every six hours. Last check finished {timeAgo(data.generatedAt, now)}
         {failing.length ? `; ${plural(failing.length, 'source')} could not be reached and will be retried.` : ', and every source responded.'}
       </p>
 

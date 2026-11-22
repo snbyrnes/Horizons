@@ -1,9 +1,9 @@
 {
-  "name": "horizon",
+  "name": "horizons",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Horizon: global medication safety alerts, with a lens on digital systems",
+  "description": "Horizons: global medication safety alerts, with a lens on digital systems",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

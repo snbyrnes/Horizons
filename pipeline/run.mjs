@@ -12,7 +12,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const DATA_DIR = path.join(ROOT, 'public', 'data')
 const RETAIN_DAYS = 730
 const MAX_PER_SOURCE = 200
-const SITE_URL = (process.env.SITE_URL || 'https://example.github.io/horizon').replace(/\/$/, '')
+const SITE_URL = (process.env.SITE_URL || 'https://example.github.io/horizons').replace(/\/$/, '')
 
 const args = process.argv.slice(2)
 const only = args.includes('--only') ? args[args.indexOf('--only') + 1].split(',') : null
@@ -108,7 +108,7 @@ ${a.topics.map((t) => `      <category>${esc(TOPIC_LABELS[t])}</category>`).join
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Horizon: medication safety in digital systems</title>
+    <title>Horizons: medication safety in digital systems</title>
     <link>${esc(SITE_URL)}/</link>
     <description>Medication safety alerts involving digital systems, collated from regulators, safety organisations and standards bodies worldwide.</description>
     <lastBuildDate>${new Date(generatedAt).toUTCString()}</lastBuildDate>

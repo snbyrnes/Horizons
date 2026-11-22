@@ -16,9 +16,9 @@ const TOPIC_EXAMPLES: Record<string, string> = {
 export function Method({ data }: { data: Dataset }) {
   return (
     <article className="page prose">
-      <h1>How Horizon works</h1>
+      <h1>How Horizons works</h1>
       <p className="lede">
-        Horizon gathers medication safety notices from {data.sources.length} feeds published by regulators, safety
+        Horizons gathers medication safety notices from {data.sources.length} feeds published by regulators, safety
         organisations, healthcare bodies and standards bodies, and highlights the ones that involve digital systems. It runs without anyone
         curating it, so it is a scanning aid and not a substitute for your formal alerting channels.
       </p>
@@ -52,7 +52,7 @@ export function Method({ data }: { data: Dataset }) {
 
       <h2>How severity is assigned</h2>
       <p>
-        Severity is Horizon's own triage label, derived from the wording of the notice. It is not the publisher's
+        Severity is Horizons' own triage label, derived from the wording of the notice. It is not the publisher's
         classification, and a notice can be more or less serious than its label suggests.
       </p>
       <table className="plain-table">

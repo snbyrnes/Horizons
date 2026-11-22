@@ -78,7 +78,7 @@ export default function App() {
         <div className="wrap masthead-in">
           <a className="brand" href="#/">
             <Logo />
-            <span className="brand-name">Horizon</span>
+            <span className="brand-name">Horizons</span>
             <span className="brand-tag">Medication safety alerts, worldwide</span>
           </a>
           <nav aria-label="Main">
@@ -110,7 +110,7 @@ export default function App() {
 
       <footer className="wrap foot">
         <p>
-          Horizon links to original notices and does not replace them. Always read the source before acting, and follow
+          Horizons links to original notices and does not replace them. Always read the source before acting, and follow
           your organisation's alerting process.
         </p>
         <p>
