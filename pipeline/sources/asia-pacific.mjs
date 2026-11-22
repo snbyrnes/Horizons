@@ -1,1 +1,148 @@
-export const ASIA_PACIFIC = []
+const region = 'Asia-Pacific'
+const year = new Date().getUTCFullYear()
+const HK = (group) => ({
+  adapter: 'html',
+  url: `https://www.drugoffice.gov.hk/eps/news/listNews/en/healthcare_providers/${group}?search_year=${year}`,
+  // The endpoint returns bare table rows.
+  select: { wrap: 'table', item: 'tr', title: 'a.newsLink', date: 'td:first-child' },
+  take: 25,
+})
+
+// Fail fast: when tga.gov.au does not answer it hangs rather than refusing.
+const TGA_FETCH = { timeout: 15000, retries: 0 }
+
+export const ASIA_PACIFIC = [
+  {
+    id: 'tga',
+    name: 'Therapeutic Goods Administration safety alerts and market actions',
+    short: 'TGA',
+    country: 'Australia',
+    region,
+    type: 'regulator',
+    home: 'https://www.tga.gov.au/safety',
+    note: 'The TGA website does not answer from every network, so this feed can be intermittent.',
+    filter: 'medication',
+    feeds: [
+      { url: 'https://www.tga.gov.au/feeds/alert/safety-alerts.xml', fetch: TGA_FETCH },
+      { url: 'https://www.tga.gov.au/feeds/alert/market-actions.xml', fetch: TGA_FETCH, hints: { kind: 'recall' } },
+    ],
+  },
+  {
+    id: 'nsw-sabs',
+    name: 'NSW Health Safety Alert Broadcast System',
+    short: 'NSW Health',
+    country: 'Australia',
+    region,
+    type: 'healthcare',
+    home: 'https://www.health.nsw.gov.au/sabs/Pages/default.aspx',
+    filter: 'medication',
+    hints: { kind: 'alert', minSeverity: 'high' },
+    feeds: [{
+      adapter: 'html',
+      url: 'https://www.health.nsw.gov.au/sabs/Pages/default.aspx',
+      select: { item: 'table.moh-rteTable-6 tr:has(a)', title: 'td a', date: 'td:last-child', summary: 'th:first-child' },
+    }],
+  },
+  {
+    id: 'nsw-cec',
+    name: 'NSW Clinical Excellence Commission medication safety updates',
+    short: 'CEC NSW',
+    country: 'Australia',
+    region,
+    type: 'safety',
+    home: 'https://cec.health.nsw.gov.au/therapeutics-safety/medication-updates',
+    hints: { minSeverity: 'advisory' },
+    feeds: [{
+      adapter: 'json',
+      url: 'https://cec.health.nsw.gov.au/assets/listings/medication-updates?root=906883',
+      rows: (d) => (d.data ?? []).slice(0, 80),
+      map: (r) => ({
+        title: r.tags ? `${r.name} (${String(r.tags).toLowerCase()})` : r.name,
+        url: 'https://cec.health.nsw.gov.au/therapeutics-safety/medication-updates',
+        key: r.assetId,
+        date: r.dateUpdated,
+        summary: [r.tags, r.status && `Status: ${r.status}`].filter(Boolean).join('. '),
+      }),
+    }],
+  },
+  {
+    id: 'medsafe',
+    name: 'Medsafe safety communications',
+    short: 'Medsafe',
+    country: 'New Zealand',
+    region,
+    type: 'regulator',
+    home: 'https://www.medsafe.govt.nz/safety/SafetyCommunications.asp',
+    hints: { minSeverity: 'advisory' },
+    feeds: [{
+      adapter: 'html',
+      url: 'https://www.medsafe.govt.nz/safety/SafetyCommunications.asp',
+      select: { item: '#content-area table tr:has(td a)', title: 'td:nth-child(4) a', date: 'td:nth-child(1)', summary: 'td:nth-child(2)' },
+    }],
+  },
+  {
+    id: 'hqsc',
+    name: 'Te Tāhū Hauora Health Quality & Safety Commission',
+    short: 'HQSC',
+    country: 'New Zealand',
+    region,
+    type: 'safety',
+    home: 'https://www.hqsc.govt.nz/',
+    filter: 'medication',
+    feeds: [{
+      adapter: 'html',
+      url: 'https://www.hqsc.govt.nz/news-and-events/',
+      select: { item: 'div.tile.tile--listing-page', title: 'h3.tile__news-title', link: 'a.tile__link', date: 'p.tile__date', summary: 'p.tile__summary' },
+    }],
+  },
+  {
+    id: 'hsa',
+    name: 'Health Sciences Authority announcements',
+    short: 'HSA',
+    country: 'Singapore',
+    region,
+    type: 'regulator',
+    home: 'https://www.hsa.gov.sg/announcements',
+    filter: 'medication',
+    feeds: [{
+      adapter: 'html',
+      url: 'https://www.hsa.gov.sg/announcements',
+      select: { item: "a[href^='/announcements/']", title: 'h2', date: 'p' },
+    }],
+  },
+  {
+    id: 'pmda',
+    name: 'Pharmaceuticals and Medical Devices Agency safety information',
+    short: 'PMDA',
+    country: 'Japan',
+    region,
+    type: 'regulator',
+    home: 'https://www.pmda.go.jp/english/safety/index.html',
+    feeds: [
+      { url: 'https://www.pmda.go.jp/rss_013.xml' },
+      { url: 'https://www.pmda.go.jp/rss_008.xml', include: 'ANZEN|safety|risk|caution|recall' },
+    ],
+  },
+  {
+    id: 'hk-drug-office',
+    name: 'Hong Kong Drug Office safety alerts and medicine recalls',
+    short: 'HK Drug Office',
+    country: 'Hong Kong',
+    region,
+    type: 'regulator',
+    home: 'https://www.drugoffice.gov.hk/eps/do/en/healthcare_providers/news_informations/safety_alerts_and_medical_recalls/index.html',
+    note: 'Includes a digest of safety news from regulators in other countries.',
+    feeds: [{ ...HK(8), hints: { kind: 'alert' } }, { ...HK(11), hints: { kind: 'recall' } }],
+  },
+  {
+    id: 'drap',
+    name: 'Drug Regulatory Authority of Pakistan recall alerts',
+    short: 'DRAP',
+    country: 'Pakistan',
+    region,
+    type: 'regulator',
+    home: 'https://www.dra.gov.pk/',
+    hints: { kind: 'recall' },
+    feeds: [{ url: 'https://www.dra.gov.pk/category/safety_information/safety_alerts/recall_alerts/feed/' }],
+  },
+]

@@ -12,8 +12,9 @@ import { UK_IRELAND } from './sources/uk-ireland.mjs'
 import { EUROPE } from './sources/europe.mjs'
 import { ASIA_PACIFIC } from './sources/asia-pacific.mjs'
 import { GLOBAL } from './sources/global.mjs'
+import { REST_OF_WORLD } from './sources/rest-of-world.mjs'
 
-export const SOURCES = [...GLOBAL, ...UK_IRELAND, ...EUROPE, ...NORTH_AMERICA, ...ASIA_PACIFIC]
+export const SOURCES = [...GLOBAL, ...UK_IRELAND, ...EUROPE, ...NORTH_AMERICA, ...ASIA_PACIFIC, ...REST_OF_WORLD]
 
 const ids = new Set()
 for (const s of SOURCES) {

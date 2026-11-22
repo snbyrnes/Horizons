@@ -57,17 +57,6 @@ export const EUROPE = [
     ],
   },
   {
-    id: 'eahp',
-    name: 'European Association of Hospital Pharmacists',
-    short: 'EAHP',
-    country: 'European Union',
-    region,
-    type: 'healthcare',
-    home: 'https://eahp.eu/',
-    filter: 'digital',
-    feeds: [{ url: 'https://eahp.eu/feed/' }],
-  },
-  {
     id: 'bfarm-rhb',
     name: 'BfArM Rote-Hand-Briefe (Germany)',
     short: 'BfArM',
@@ -117,11 +106,11 @@ export const EUROPE = [
     type: 'regulator',
     lang: 'fr',
     home: 'https://ansm.sante.fr/informations-de-securite/',
-    filter: 'medication',
     feeds: [{
       adapter: 'html',
       url: 'https://ansm.sante.fr/informations-de-securite/',
-      select: { item: 'article.article-item', title: 'span.article-title', date: 'span.article-date', summary: 'span.article-content' },
+      // Medicines only: the page also lists devices, diagnostics and cosmetics.
+      select: { item: 'article.article-item:has(span.article-health-product:contains("dicament"))', title: 'span.article-title', date: 'span.article-date', summary: 'span.article-content' },
       // In vitro diagnostics and cosmetics are out of scope.
       exclude: 'biochimie|réactif|reactif|diagnostic|cosm[ée]tique|tatouage',
     }],
@@ -175,6 +164,7 @@ export const EUROPE = [
     feeds: [{
       adapter: 'html',
       url: 'https://www.aifa.gov.it/en/sicurezza-dei-farmaci',
+      fetch: { timeout: 20000, retries: 1 }, // answers quickly or not at all
       select: { item: 'div.news-list-box div.Grid-cell.other-box', title: 'div.news-title a', date: 'div.news-date p' },
     }],
   },

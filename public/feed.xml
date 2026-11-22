@@ -4,7 +4,7 @@
     <title>Horizon: medication safety in digital systems</title>
     <link>https://example.github.io/horizon/</link>
     <description>Medication safety alerts involving digital systems, collated from regulators, safety organisations and standards bodies worldwide.</description>
-    <lastBuildDate>Sun, 22 Nov 2026 22:01:30 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 22:15:38 GMT</lastBuildDate>
     <item>
       <title>PubMed: Medication Safety Risks Associated With Inappropriate Use of Non-Crushable Tablets in Enterally Fed Patients: A Nationwide Cohort Study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/43018084/</link>
@@ -17,9 +17,17 @@
       <title>HSSIB: Procurement, usability and adoption of ‘smart’ infusion pumps</title>
       <link>https://www.hssib.org.uk/patient-safety-investigations/procurement-usability-and-adoption-of-smart-infusion-pumps/</link>
       <guid isPermaLink="false">0c63bd15ffdbe6</guid>
-      <pubDate>Fri, 20 Nov 2026 22:01:30 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 22:15:07 GMT</pubDate>
       <description>Although the aim of smart infusion pumps is to improve patient safety, the technology can introduce new risks. This investigation focused on understanding the challenges involved in introducing smart infusion pump technology within NHS hospitals.</description>
       <category>Infusion pumps and connected devices</category>
+    </item>
+    <item>
+      <title>ISO: ISO/DTS 19844-1.2 - Health informatics — Identification of medicinal products (IDMP) — Part 1: Implementation of ISO 11238 (general)</title>
+      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/98/89876.html</link>
+      <guid isPermaLink="false">4691466f40ce07</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+      <description>This document reached stage 50.00 on 2026-11-19, TC/SC: ISO/TC 215/SC 2, ICS: 35.240.80</description>
+      <category>Data, terminology and interoperability</category>
     </item>
     <item>
       <title>PubMed: Use of Synchronous, Interruptive Electronic Health Record-Embedded Medication Alerts to Improve Evidence-Based Medication Prescribing: Randomized Comparative Effectiveness Trial of Two Prescriber Alerts.</title>
@@ -57,9 +65,17 @@
       <title>HSSIB: Electronic prescribing and medicines administration systems and safe discharge</title>
       <link>https://www.hssib.org.uk/patient-safety-investigations/electronic-prescribing-and-medicines-administration-systems-and-safe-discharge/</link>
       <guid isPermaLink="false">686fb2c9581391</guid>
-      <pubDate>Tue, 17 Nov 2026 22:01:30 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 22:15:07 GMT</pubDate>
       <description>We’ve identified a significant safety risk posed by poorly implemented electronic prescribing and medicines administration (ePMA) systems. An ePMA system supports the safe, effective, and cost-effective use of medicines from a patient’s admission to hospital until their discharge.</description>
       <category>Electronic prescribing</category>
+    </item>
+    <item>
+      <title>ISO: ISO/DIS 11238 - Health informatics — Identification of medicinal products — Data elements and structures for the unique identification and exchange of regulated information on substances</title>
+      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/85/88547.html</link>
+      <guid isPermaLink="false">cc4878bae30497</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+      <description>This document reached stage 40.99 on 2026-11-17, TC/SC: ISO/TC 215/SC 2, ICS: 35.240.80</description>
+      <category>Data, terminology and interoperability</category>
     </item>
     <item>
       <title>PubMed: Enhancing anesthesiology medication safety and security through implementation of an automated dispensing system in a multihospital health system.</title>
@@ -222,6 +238,14 @@
       <category>AI and machine learning</category>
     </item>
     <item>
+      <title>ISO: ISO/DTS 22039 - Health informatics — Generic model for bridging care provider processes and prescribed self-care process</title>
+      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/85/88556.html</link>
+      <guid isPermaLink="false">26889ac2e37e48</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+      <description>This document reached stage 50.00 on 2026-10-20, TC/SC: ISO/TC 215, ICS: 11.020.10; 35.240.80</description>
+      <category>Data, terminology and interoperability</category>
+    </item>
+    <item>
       <title>PubMed: Artificial Intelligence in Pharmacy Services: A Comparative Bibliometric Analysis of United States and Global Research Trends.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42902889/</link>
       <guid isPermaLink="false">16df0341541ac3</guid>
@@ -303,6 +327,14 @@
 
     </item>
     <item>
+      <title>ISO: ISO/TS 20443 - Health informatics — Identification of medicinal products — Implementation for ISO 11615 data elements and structures for the unique identification and exchange of regulated medicinal product information</title>
+      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/64/86406.html</link>
+      <guid isPermaLink="false">c5e837fa0ee296</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>This document reached stage 60.00 on 2026-10-09, TC/SC: ISO/TC 215, ICS: 35.240.80</description>
+      <category>Data, terminology and interoperability</category>
+    </item>
+    <item>
       <title>PubMed: Artificial intelligence in pharmacy practice in the Middle East: a scoping review of applications, adoption, barriers, and future directions.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42920672/</link>
       <guid isPermaLink="false">8304f1fa174199</guid>
@@ -350,6 +382,14 @@
       <pubDate>Wed, 30 Sep 2026 12:27:02 GMT</pubDate>
       <description>Advances in home diabetes management technologies have transformed how millions of people manage their condition outside of traditional clinical settings. Devices such as insulin pumps, continuous glucose monitors (CGMs), and integrated systems that combine the two have enabled tighter glucose control, fewer manual interventions, and greater independence for patients. Closed-loop systems, in particular, represent a…</description>
       <category>Infusion pumps and connected devices</category>
+    </item>
+    <item>
+      <title>ISO: ISO/FDIS 11616 - Health informatics — Identification of medicinal products — Data elements and structures for unique identification and exchange of regulated pharmaceutical product information</title>
+      <link>https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/08/85/88550.html</link>
+      <guid isPermaLink="false">3152eeb2b6a0ed</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <description>This document reached stage 50.00 on 2026-09-30, TC/SC: ISO/TC 215/SC 2, ICS: 35.240.80</description>
+      <category>Data, terminology and interoperability</category>
     </item>
     <item>
       <title>PubMed: AI-based clinical decision support systems for antibiotic therapy in common adult infections: a systematic review from development to clinical implementation.</title>
@@ -450,47 +490,6 @@
       <guid isPermaLink="false">066223eed1b8f6</guid>
       <pubDate>Mon, 21 Sep 2026 23:00:00 GMT</pubDate>
       <description>Frontiers in human neuroscience. Mei Q, Chen X</description>
-
-    </item>
-    <item>
-      <title>PubMed: MoTRANet: Safety-Aware Drug Recommendation via Molecular Representation Learning and Dynamic Patient Modeling.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42771613/</link>
-      <guid isPermaLink="false">077bbbcd6cbe2c</guid>
-      <pubDate>Mon, 21 Sep 2026 23:00:00 GMT</pubDate>
-      <description>IEEE transactions on computational biology and bioinformatics. Jia P, Gao J, Sha J et al.</description>
-
-    </item>
-    <item>
-      <title>PubMed: Artificial intelligence in pharmacy and pharmaceutical sciences: Research output, trends, and thematic priorities - A descriptive analysis of web of science-indexed publications (2010-2025).</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42889819/</link>
-      <guid isPermaLink="false">b65a0e6e3b840a</guid>
-      <pubDate>Sun, 20 Sep 2026 23:00:00 GMT</pubDate>
-      <description>Exploratory research in clinical and social pharmacy. Salman B, Mohamed A, Shaikh AJ et al.</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
-      <title>PubMed: Distilling AI Workforce-Readiness Competencies for U.S. Pharmacists from Job Advertisements: Implications for Pharmacy Education.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42784227/</link>
-      <guid isPermaLink="false">74a8a92564ed59</guid>
-      <pubDate>Sat, 19 Sep 2026 23:00:00 GMT</pubDate>
-      <description>Pharmacy (Basel, Switzerland). Malhotra A, Cheung A</description>
-
-    </item>
-    <item>
-      <title>PubMed: Summarizing the evidence on health-system impacts of smart pump interoperability: A scoping review.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42760908/</link>
-      <guid isPermaLink="false">9c588a6f657698</guid>
-      <pubDate>Fri, 18 Sep 2026 23:00:00 GMT</pubDate>
-      <description>American journal of health-system pharmacy : AJHP : official journal of the American Society of Health-System Pharmacists. Glashan EV, Nguyen L, Xiong SY et al.</description>
-      <category>Infusion pumps and connected devices</category>
-      <category>Data, terminology and interoperability</category>
-    </item>
-    <item>
-      <title>PubMed: Patient Safety Gaps in Rheumatology: A Mixed-Methods Study.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42755416/</link>
-      <guid isPermaLink="false">6ec9da27bfe76d</guid>
-      <pubDate>Thu, 17 Sep 2026 23:00:00 GMT</pubDate>
-      <description>Journal of patient safety. Nasrallah C, Wilson C, Fitzpatrick J et al.</description>
 
     </item>
   </channel>

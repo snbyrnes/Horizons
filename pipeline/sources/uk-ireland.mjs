@@ -82,21 +82,6 @@ export const UK_IRELAND = [
     feeds: [{ url: 'https://www.healthcareimprovementscotland.scot/feed/' }],
   },
   {
-    id: 'rps',
-    name: 'Royal Pharmaceutical Society (Royal College of Pharmacy)',
-    short: 'RPS',
-    country: 'United Kingdom',
-    region,
-    type: 'healthcare',
-    home: 'https://www.rcpharm.org/',
-    filter: 'digital',
-    feeds: [{
-      adapter: 'json',
-      url: 'https://www.rcpharm.org/wp-json/wp/v2/news?per_page=30&_fields=id,date,link,title,excerpt',
-      map: (p) => ({ title: p.title?.rendered, url: p.link, date: p.date, summary: p.excerpt?.rendered }),
-    }],
-  },
-  {
     id: 'hpra',
     name: 'Health Products Regulatory Authority',
     short: 'HPRA',

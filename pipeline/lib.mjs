@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto'
 import { XMLParser } from 'fast-xml-parser'
 import * as cheerio from 'cheerio'
 
-export const USER_AGENT = 'Mozilla/5.0 (compatible; HorizonMedSafety/1.0; medication safety alert aggregator)'
+export const USER_AGENT = 'Mozilla/5.0 (compatible; HorizonMedSafety/1.0)'
 
 const inFlight = new Map()
 
@@ -29,14 +29,16 @@ async function fetchTextOnce(url, { timeout = 30000, retries = 2, headers = {} }
       })
       if (!res.ok) {
         const err = new Error(`HTTP ${res.status}`)
-        // Client errors other than 429 will not improve on retry.
-        if (res.status < 500 && res.status !== 429) { err.fatal = true }
+        // Missing pages will not improve on retry. 403 and 429 often do: some firewalls
+        // refuse the first request from a new address and accept the next.
+        if ([400, 401, 404, 410].includes(res.status)) err.fatal = true
         throw err
       }
       return await res.text()
     } catch (err) {
       lastErr = err
-      if (err.fatal) break
+      // A site that hangs once usually hangs again; one retry is enough.
+      if (err.fatal || (err.name === 'TimeoutError' && attempt >= 1)) break
       await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)))
     }
   }
@@ -161,7 +163,7 @@ export function parseFeed(body) {
 
 /** Scrape a server-rendered listing page using CSS selectors from the source config. */
 export function parseHtmlList(body, cfg, baseUrl) {
-  const $ = cheerio.load(body)
+  const $ = cheerio.load(cfg.wrap ? `<${cfg.wrap}>${body}</${cfg.wrap}>` : body)
   const out = []
   $(cfg.item).each((_, el) => {
     const $el = $(el)
