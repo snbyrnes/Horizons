@@ -11,7 +11,7 @@ Horizons is a static site. A scheduled GitHub Actions job gathers the alerts, co
 ![Horizons information architecture: public sources feed a scheduled pipeline of adapters, normaliser, scope filter, classifier and merge step, which writes static data files read by the website](docs/architecture.svg)
 
 ```
-GitHub Actions (every 6 hours)
+GitHub Actions (every 12 hours)
   └─ npm run fetch        pipeline/run.mjs reads every source in pipeline/sources/
        ├─ adapters.mjs    RSS/Atom, HTML listings, GOV.UK, openFDA, Health Canada, PubMed, ...
        ├─ classify.mjs    publisher class first, then keyword rules: severity, digital topics, type of notice
@@ -111,7 +111,7 @@ Pull requests that add a source are welcome.
 
 1. Push this repository to GitHub.
 2. In **Settings > Pages**, set **Source** to **GitHub Actions**.
-3. Run the **Update alerts and deploy** workflow once from the Actions tab. After that it runs every six hours and on every push to `main`.
+3. Run the **Update alerts and deploy** workflow once from the Actions tab. After that it runs every 12 hours and on every push to `main`.
 
 The build uses relative paths, so it works at `https://<user>.github.io/<repo>/` without configuration.
 

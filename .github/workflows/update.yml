@@ -2,7 +2,7 @@ name: Update alerts and deploy
 
 on:
   schedule:
-    - cron: '17 */6 * * *' # every six hours, off the hour to avoid the scheduler rush
+    - cron: '17 */12 * * *' # every twelve hours, off the hour to avoid the scheduler rush
   push:
     branches: [main]
     paths-ignore: ['public/data/**', 'public/feed.xml']

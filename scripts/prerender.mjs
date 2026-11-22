@@ -30,7 +30,7 @@ const cssHref = shell.match(/href="\.\/(assets\/[^"]+\.css)"/)?.[1]
 if (!cssHref) throw new Error('Could not find the built stylesheet in dist/index.html')
 
 function alertList(items) {
-  if (!items.length) return '<p class="lede lede-small">No current alerts. New alerts appear here within six hours of publication.</p>'
+  if (!items.length) return '<p class="lede lede-small">No current alerts. New alerts appear here within 12 hours of publication.</p>'
   return `<ul class="rows">${items.map((a) => {
     const s = sourceById[a.source]
     return `<li class="row sev-${a.severity}"><div class="row-head"><span class="row-main"><a class="row-title" href="${esc(a.url)}" rel="noopener"${s.lang !== 'en' ? ` lang="${esc(s.lang)}"` : ''}>${esc(a.title)}</a><span class="row-meta"><span class="sev-tag sev-tag-${a.severity}${a.pclass ? '' : ' sev-est'}">${SEV[a.severity]}</span>${a.pclass ? `<span class="pclass">${esc(a.pclass)}</span>` : ''}<time datetime="${a.published.slice(0, 10)}">${dateFmt.format(new Date(a.published))}</time>${a.topics.map((t) => `<span class="topic">${esc(alertsFile.topics[t])}</span>`).join('')}</span></span><span class="row-src"><span class="row-org">${esc(s.short)}</span><span class="row-country">${esc(s.country)}</span></span></div></li>`
@@ -110,7 +110,7 @@ for (const [id, t] of Object.entries(TOPIC_PAGES)) {
     up: '../../',
     urlPath,
     title: `${t.name}: medication safety alerts | Horizons`,
-    description: `Latest medication safety alerts, recalls and guidance about ${t.about}, collated from regulators and safety organisations worldwide. Updated every six hours.`,
+    description: `Latest medication safety alerts, recalls and guidance about ${t.about}, collated from regulators and safety organisations worldwide. Updated every 12 hours.`,
     h1: `${t.name}: medication safety alerts`,
     intro: `Safety alerts, recalls, investigations and guidance about ${esc(t.about)}, gathered from regulators, safety organisations and healthcare bodies in ${countries} countries and regions.`,
     body: alertList(items),
@@ -128,7 +128,7 @@ for (const [region, slug] of Object.entries(REGION_PAGES)) {
     up: '../../',
     urlPath,
     title: `Medication safety alerts: ${label} | Horizons`,
-    description: `Latest medication safety alerts, medicine recalls and safety communications from ${orgs.slice(0, 6).join(', ')}${orgs.length > 6 ? ' and others' : ''}. Updated every six hours.`,
+    description: `Latest medication safety alerts, medicine recalls and safety communications from ${orgs.slice(0, 6).join(', ')}${orgs.length > 6 ? ' and others' : ''}. Updated every 12 hours.`,
     h1: `Medication safety alerts: ${label}`,
     intro: `The most recent medicine safety alerts, recalls and safety communications from ${esc(orgs.join(', '))}.`,
     body: alertList(items),

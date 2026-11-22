@@ -36,7 +36,7 @@ export function Method({ data }: { data: Dataset }) {
 
       <h2>Where the alerts come from</h2>
       <p>
-        Every six hours an automated job reads each organisation's public feed or listing page, keeps the title, date,
+        Every 12 hours an automated job reads each organisation's public feed or listing page, keeps the title, date,
         link and a short extract, and publishes the result as a static file that this site reads. Nothing is rewritten
         or summarised by a model: the text you see is the publisher's own, in the publisher's language. Alerts are
         kept for two years, although most sources only expose their last few months.
