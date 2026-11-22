@@ -1,3 +1,4 @@
+import { newIssue, NOT_INCLUDED } from './community'
 import { plural, REGIONS, shortDate, timeAgo, TYPE_LABELS, type Dataset, type Source } from './data'
 
 const STATUS: Record<Source['status'], string> = {
@@ -72,6 +73,37 @@ export function Sources({ data, now }: { data: Dataset; now: number }) {
           </section>
         )
       })}
+
+      <section className="src-region" id="not-included">
+        <h2>Sources we could not include</h2>
+        <p className="lede lede-small">
+          We tried these {NOT_INCLUDED.length} and could not read them automatically. If you work with one of these
+          organisations, or know of a public feed, API or contact we missed, please{' '}
+          <a href={newIssue('suggest-a-source.yml')} target="_blank" rel="noopener noreferrer">share what you know</a>.
+          You can also <a href="#/feedback">suggest a source</a> that is not listed at all.
+        </p>
+        <div className="table-scroll">
+          <table className="src-table">
+            <thead>
+              <tr>
+                <th scope="col">Organisation</th>
+                <th scope="col">What happened when we checked</th>
+              </tr>
+            </thead>
+            <tbody>
+              {NOT_INCLUDED.map((n) => (
+                <tr key={n.name}>
+                  <th scope="row">
+                    {n.name}
+                    <span className="src-country">{n.country}</span>
+                  </th>
+                  <td>{n.reason}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
     </article>
   )
 }

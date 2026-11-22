@@ -1,10 +1,14 @@
 # Horizons
 
+**Live site: https://snbyrnes.github.io/Horizons/**
+
 Medication safety alerts from regulators, safety organisations, healthcare bodies and standards bodies worldwide, with a lens on **medication safety in digital systems** (ePrescribing, health records, decision support, infusion pumps, dispensing automation, barcoding, interoperability, software and AI).
 
 Horizons is a static site. A scheduled GitHub Actions job gathers the alerts, commits the refreshed data, and redeploys GitHub Pages. There is no server and no API key.
 
 ## How it works
+
+![Horizons information architecture: public sources feed a scheduled pipeline of adapters, normaliser, scope filter, classifier and merge step, which writes static data files read by the website](docs/architecture.svg)
 
 ```
 GitHub Actions (every 6 hours)
@@ -59,6 +63,47 @@ feeds: [{ adapter: 'html', url: '...', select: { item: 'li.alert', title: 'h3 a'
 ```
 
 Check it with `node pipeline/run.mjs --dry --only example` before committing.
+
+## Sources we could not include
+
+We tried these and could not read them automatically. **If you work with one of these organisations, or know of a public feed, API or contact we missed, please [open an issue](https://github.com/snbyrnes/Horizons/issues/new?template=suggest-a-source.yml).** The same list is on the site's [Sources page](https://snbyrnes.github.io/Horizons/#/sources).
+
+| Organisation | Country | What happened when we checked |
+| --- | --- | --- |
+| ISMP (US) newsletters and alerts | United States | Member content sits behind a login. Public articles are covered through the ECRI and ISMP feed. |
+| ECRI alerts and Top 10 Health Technology Hazards | United States | No public feed or listing page. |
+| Joint Commission Sentinel Event Alerts | United States | The list is drawn in the browser by a search widget, so there is nothing to read from the page itself, and there is no feed. |
+| AHRQ Patient Safety Network (PSNet) | United States | The feed responds but has not been updated since March 2025. |
+| United States Pharmacopeia (USP) | United States | Refuses automated readers (access denied). |
+| ASHP drug shortages | United States | The RSS feed has been discontinued. |
+| CDC Health Alert Network | United States | The feed responds but is empty. |
+| Drug Shortages Canada | Canada | Bot challenge on the feed, and the API needs a registered account. |
+| NHS Specialist Pharmacy Service | United Kingdom | Bot challenge on every page and feed we tried. |
+| NHS England Digital: clinical safety (DCB0129 and DCB0160) | United Kingdom | Bot challenge on news and clinical safety pages. |
+| Patient Safety Learning hub | United Kingdom | Bot challenge on the site and its feeds. |
+| NHS Wales patient safety alerts and notices | United Kingdom | We could not find a dated list of alerts or a feed. |
+| NHS Scotland incidents and alerts (NSS IRIC) | United Kingdom | No dated list or feed; the page points to other sites. |
+| CBG-MEB (Medicines Evaluation Board) | Netherlands | News is drawn in the browser and there is no feed. Lareb covers the Netherlands for now. |
+| Norwegian Medical Products Agency (DMP) | Norway | News is drawn in the browser and there is no feed. |
+| ISMP Spain | Spain | Rate-limited our first request. |
+| Australian Commission on Safety and Quality in Health Care | Australia | The site did not answer automated requests when we checked. |
+| Australian Digital Health Agency | Australia | The site did not answer automated requests when we checked. |
+| Safer Care Victoria safety alerts | Australia | The site did not answer automated requests when we checked. |
+| SA Health medication safety alerts and notices | Australia | Refuses automated readers (access denied). |
+| CDSCO and the Pharmacovigilance Programme of India | India | Connections timed out or returned server errors. |
+| ANVISA health alerts | Brazil | The alerts service refuses automated readers and the public page is drawn in the browser. |
+| International Medical Device Regulators Forum (IMDRF) | International | The site did not answer automated requests when we checked. |
+| International Medication Safety Network | International | Reachable, but nothing new has been posted since 2023. |
+
+## Feedback and contributions
+
+Horizons gets better when the people who use it say what is missing. The site has a [Feedback page](https://snbyrnes.github.io/Horizons/#/feedback), and everything goes through [GitHub issues](https://github.com/snbyrnes/Horizons/issues):
+
+- [Suggest a source](https://github.com/snbyrnes/Horizons/issues/new?template=suggest-a-source.yml), especially one that covers digital systems
+- [Report a wrong label](https://github.com/snbyrnes/Horizons/issues/new?template=wrong-label.yml) on an alert
+- [Share an idea or a problem](https://github.com/snbyrnes/Horizons/issues/new?template=feedback.yml)
+
+Pull requests that add a source are welcome.
 
 ## Deploy on GitHub Pages
 

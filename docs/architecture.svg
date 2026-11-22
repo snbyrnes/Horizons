@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-labelledby="t d" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
+  <title id="t">Horizons information architecture</title>
+  <desc id="d">Public sources are read by a scheduled pipeline of adapters, a normaliser, a scope filter, a keyword classifier and a merge step. The pipeline writes static data files that the React website on GitHub Pages reads.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#12203a"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="700" rx="14" fill="#f2f5f9"/>
+  <text x="40" y="52" font-size="26" font-weight="800" fill="#12203a">Horizons: how alerts get from publishers to the page</text>
+
+  <!-- Sources -->
+  <rect x="40" y="80" width="1120" height="112" rx="10" fill="#ffffff" stroke="#d3dae5"/>
+  <text x="64" y="112" font-size="17" font-weight="700" fill="#12203a">1. Public sources</text>
+  <text x="222" y="112" font-size="14" fill="#536079">about 50 feeds and pages, checked every six hours</text>
+  <g font-size="14" font-weight="600" fill="#12203a">
+    <rect x="64" y="130" width="196" height="40" rx="6" fill="#e8edf3"/><text x="162" y="155" text-anchor="middle">Regulators</text>
+    <rect x="278" y="130" width="196" height="40" rx="6" fill="#e8edf3"/><text x="376" y="155" text-anchor="middle">Safety organisations</text>
+    <rect x="492" y="130" width="196" height="40" rx="6" fill="#e8edf3"/><text x="590" y="155" text-anchor="middle">Healthcare bodies</text>
+    <rect x="706" y="130" width="196" height="40" rx="6" fill="#e8edf3"/><text x="804" y="155" text-anchor="middle">Standards bodies</text>
+    <rect x="920" y="130" width="216" height="40" rx="6" fill="#e8edf3"/><text x="1028" y="155" text-anchor="middle">Research (PubMed)</text>
+  </g>
+
+  <path d="M600 192 V226" stroke="#12203a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Pipeline -->
+  <rect x="40" y="232" width="1120" height="222" rx="10" fill="#ffffff" stroke="#4a35cf" stroke-width="2"/>
+  <text x="64" y="264" font-size="17" font-weight="700" fill="#12203a">2. Pipeline</text>
+  <text x="166" y="264" font-size="14" fill="#536079">Node.js, run by GitHub Actions on a schedule (pipeline/run.mjs)</text>
+
+  <g>
+    <rect x="64" y="284" width="196" height="146" rx="8" fill="#eceafd"/>
+    <rect x="283" y="284" width="196" height="146" rx="8" fill="#eceafd"/>
+    <rect x="502" y="284" width="196" height="146" rx="8" fill="#eceafd"/>
+    <rect x="721" y="284" width="196" height="146" rx="8" fill="#4a35cf"/>
+    <rect x="940" y="284" width="196" height="146" rx="8" fill="#eceafd"/>
+  </g>
+  <g stroke="#12203a" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M260 357 H279"/><path d="M479 357 H498"/><path d="M698 357 H717"/><path d="M917 357 H936"/>
+  </g>
+
+  <g fill="#12203a">
+    <text x="80" y="314" font-size="16" font-weight="700">Adapters</text>
+    <text font-size="13" fill="#3b4760"><tspan x="80" y="340">Read each source:</tspan><tspan x="80" y="359">RSS and Atom feeds,</tspan><tspan x="80" y="378">HTML listing pages,</tspan><tspan x="80" y="397">JSON APIs (openFDA,</tspan><tspan x="80" y="416">GOV.UK, EMA, WHO)</tspan></text>
+
+    <text x="299" y="314" font-size="16" font-weight="700">Normalise</text>
+    <text font-size="13" fill="#3b4760"><tspan x="299" y="340">One shape for every</tspan><tspan x="299" y="359">item: title, date, link</tspan><tspan x="299" y="378">and a short extract in</tspan><tspan x="299" y="397">the publisher's own</tspan><tspan x="299" y="416">words</tspan></text>
+
+    <text x="518" y="314" font-size="16" font-weight="700">Scope filter</text>
+    <text font-size="13" fill="#3b4760"><tspan x="518" y="340">Broad feeds, such as</tspan><tspan x="518" y="359">device recalls or news,</tspan><tspan x="518" y="378">are narrowed to</tspan><tspan x="518" y="397">medicines and digital</tspan><tspan x="518" y="416">systems</tspan></text>
+  </g>
+  <g fill="#ffffff">
+    <text x="737" y="314" font-size="16" font-weight="700">Classifier</text>
+    <text font-size="13"><tspan x="737" y="340">Transparent keyword</tspan><tspan x="737" y="359">rules, no model:</tspan><tspan x="737" y="378">10 digital topics,</tspan><tspan x="737" y="397">severity, and type</tspan><tspan x="737" y="416">of notice</tspan></text>
+  </g>
+  <g fill="#12203a">
+    <text x="956" y="314" font-size="16" font-weight="700">Merge</text>
+    <text font-size="13" fill="#3b4760"><tspan x="956" y="340">Joins the stored</tspan><tspan x="956" y="359">history, removes</tspan><tspan x="956" y="378">repeats, keeps two</tspan><tspan x="956" y="397">years, records each</tspan><tspan x="956" y="416">source's health</tspan></text>
+  </g>
+
+  <path d="M330 454 V488" stroke="#12203a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Data -->
+  <rect x="40" y="494" width="580" height="166" rx="10" fill="#ffffff" stroke="#d3dae5"/>
+  <text x="64" y="526" font-size="17" font-weight="700" fill="#12203a">3. Static data files</text>
+  <text x="64" y="548" font-size="14" fill="#536079">Committed to the repository, so there is no database or server</text>
+  <g font-size="13.5" font-weight="600" fill="#12203a">
+    <rect x="64" y="566" width="170" height="70" rx="6" fill="#e8edf3"/>
+    <text x="149" y="596" text-anchor="middle">alerts.json</text>
+    <text x="149" y="616" text-anchor="middle" font-weight="400" fill="#536079" font-size="12.5">every alert and its tags</text>
+    <rect x="246" y="566" width="170" height="70" rx="6" fill="#e8edf3"/>
+    <text x="331" y="596" text-anchor="middle">sources.json</text>
+    <text x="331" y="616" text-anchor="middle" font-weight="400" fill="#536079" font-size="12.5">feed status and counts</text>
+    <rect x="428" y="566" width="170" height="70" rx="6" fill="#e8edf3"/>
+    <text x="513" y="596" text-anchor="middle">feed.xml</text>
+    <text x="513" y="616" text-anchor="middle" font-weight="400" fill="#536079" font-size="12.5">RSS of digital alerts</text>
+  </g>
+
+  <path d="M620 577 H654" stroke="#12203a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Website -->
+  <rect x="660" y="494" width="500" height="166" rx="10" fill="#12203a"/>
+  <text x="684" y="526" font-size="17" font-weight="700" fill="#ffffff">4. Website</text>
+  <text x="684" y="548" font-size="14" fill="#c3cde0">React and Vite, built and deployed to GitHub Pages</text>
+  <g font-size="13.5" font-weight="600" fill="#ffffff">
+    <rect x="684" y="566" width="220" height="30" rx="6" fill="#26365a"/><text x="794" y="586" text-anchor="middle">Alerts, filters and search</text>
+    <rect x="916" y="566" width="220" height="30" rx="6" fill="#4a35cf"/><text x="1026" y="586" text-anchor="middle">Digital systems lens</text>
+    <rect x="684" y="606" width="220" height="30" rx="6" fill="#26365a"/><text x="794" y="626" text-anchor="middle">Sources and feed status</text>
+    <rect x="916" y="606" width="220" height="30" rx="6" fill="#26365a"/><text x="1026" y="626" text-anchor="middle">How it works, Feedback</text>
+  </g>
+</svg>

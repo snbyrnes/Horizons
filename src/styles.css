@@ -298,6 +298,16 @@ button { cursor: pointer; }
 .status-partial::before, .status-empty::before { background: var(--high); }
 .status-error::before { background: var(--critical); }
 
+.lede-small { font-size: 1rem; margin: 0 0 16px; }
+.lede a { color: var(--digital); font-weight: 600; }
+
+.asks { display: grid; gap: 16px; margin-top: 32px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); max-width: 980px; }
+.ask { background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--digital); border-radius: var(--radius); padding: 20px 22px 22px; display: flex; flex-direction: column; }
+.page .ask h2 { margin: 0 0 6px; font-size: 1.15rem; }
+.ask p { color: var(--muted); margin-bottom: 18px; flex: 1; }
+.ask-actions { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.ask-more { color: var(--digital); font-weight: 600; font-size: 0.94rem; }
+
 /* ---------- Footer ---------- */
 
 .foot { border-top: 1px solid var(--line); padding-block: 24px 40px; color: var(--muted); font-size: 0.9rem; display: grid; gap: 6px; }

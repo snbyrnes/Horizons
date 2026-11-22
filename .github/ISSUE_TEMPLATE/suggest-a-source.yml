@@ -1,0 +1,31 @@
+name: Suggest a source
+description: Propose an organisation to add, or share how to reach one we could not include.
+title: "Source: "
+labels: ["source"]
+body:
+  - type: input
+    id: organisation
+    attributes:
+      label: Organisation
+      description: Name and country.
+      placeholder: Example Medicines Agency, Exampleland
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Feed or alerts page
+      description: A link to an RSS feed, API or the page that lists the alerts.
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What does it publish?
+      description: For example recalls, safety alerts, digital clinical safety notices. Say if it often covers digital systems.
+  - type: textarea
+    id: access
+    attributes:
+      label: Anything we should know about access?
+      description: For example a login, terms of use, or a contact who could help. Useful for sources on our "could not include" list.

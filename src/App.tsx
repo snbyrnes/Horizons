@@ -3,12 +3,14 @@ import { loadDataset, timeAgo, type Dataset } from './data'
 import { Feed } from './Feed'
 import { Sources } from './Sources'
 import { Method } from './Method'
+import { Feedback } from './Feedback'
+import { REPO_URL } from './community'
 
-type Route = { view: 'alerts' | 'sources' | 'method'; query: string }
+type Route = { view: 'alerts' | 'sources' | 'method' | 'feedback'; query: string }
 
 function parseHash(): Route {
   const [path, query = ''] = window.location.hash.replace(/^#\/?/, '').split('?')
-  const view = path === 'sources' || path === 'method' ? path : 'alerts'
+  const view = path === 'sources' || path === 'method' || path === 'feedback' ? path : 'alerts'
   return { view, query }
 }
 
@@ -69,6 +71,7 @@ export default function App() {
     { id: 'alerts', label: 'Alerts', href: '#/' },
     { id: 'sources', label: 'Sources', href: '#/sources' },
     { id: 'method', label: 'How it works', href: '#/method' },
+    { id: 'feedback', label: 'Feedback', href: '#/feedback' },
   ]
 
   return (
@@ -99,6 +102,8 @@ export default function App() {
           </div>
         ) : !data ? (
           <p className="loading" role="status">Loading alerts</p>
+        ) : route.view === 'feedback' ? (
+          <Feedback />
         ) : route.view === 'sources' ? (
           <Sources data={data} now={now} />
         ) : route.view === 'method' ? (
@@ -118,6 +123,8 @@ export default function App() {
           <a href="./feed.xml">RSS feed of digital-system alerts</a>
           <span aria-hidden="true"> | </span>
           <a href="./data/alerts.json">Download the data (JSON)</a>
+          <span aria-hidden="true"> | </span>
+          <a href={REPO_URL} target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
         </p>
       </footer>
     </>

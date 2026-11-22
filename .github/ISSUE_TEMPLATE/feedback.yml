@@ -1,0 +1,16 @@
+name: Feedback or idea
+description: A feature you need, something confusing, or something broken.
+title: "Feedback: "
+labels: ["feedback"]
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: What would you like to tell us?
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Your role (optional)
+      description: For example medication safety officer, clinical informatician, pharmacist. It helps us understand how Horizons is used.

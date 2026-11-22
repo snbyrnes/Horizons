@@ -1,0 +1,19 @@
+name: Report a wrong label
+description: An alert has the wrong severity or digital topic, or a digital issue was missed.
+title: "Label: "
+labels: ["classification"]
+body:
+  - type: input
+    id: alert
+    attributes:
+      label: Which alert?
+      description: Paste the alert title or the link to the original notice.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it have been?
+      description: For example "should be in the digital lens under Electronic prescribing" or "Critical, not Advisory".
+    validations:
+      required: true
