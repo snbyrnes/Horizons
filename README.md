@@ -86,6 +86,8 @@ We tried these and could not read them automatically. **If you work with one of 
 | CBG-MEB (Medicines Evaluation Board) | Netherlands | News is drawn in the browser and there is no feed. Lareb covers the Netherlands for now. |
 | Norwegian Medical Products Agency (DMP) | Norway | News is drawn in the browser and there is no feed. |
 | ISMP Spain | Spain | Rate-limited our first request. |
+| NSW Clinical Excellence Commission medication safety updates | Australia | Readable from an ordinary connection, but refuses requests from the servers that run our updates. |
+| Hong Kong Drug Office | Hong Kong | Readable, but its safety news re-posts notices from regulators we already read directly, and we could not separate out its own notices. |
 | Australian Commission on Safety and Quality in Health Care | Australia | The site did not answer automated requests when we checked. |
 | Australian Digital Health Agency | Australia | The site did not answer automated requests when we checked. |
 | Safer Care Victoria safety alerts | Australia | The site did not answer automated requests when we checked. |
@@ -112,20 +114,6 @@ Pull requests that add a source are welcome.
 3. Run the **Update alerts and deploy** workflow once from the Actions tab. After that it runs every six hours and on every push to `main`.
 
 The build uses relative paths, so it works at `https://<user>.github.io/<repo>/` without configuration.
-
-## Search visibility
-
-The app is rendered in the browser, which search engines read poorly, so the build also writes plain HTML with [scripts/prerender.mjs](scripts/prerender.mjs):
-
-- a snapshot of the latest alerts inside `index.html` (the app replaces it on load)
-- one page per digital topic (`/topics/infusion-pumps/` and nine others) and per region (`/regions/europe/` and five others), refreshed every six hours
-- `sitemap.xml`, canonical links, Open Graph tags, a social preview image and schema.org `WebSite` and `Dataset` data
-
-Three things need the site owner:
-
-1. **Google Search Console and Bing Webmaster Tools**: verify the site and submit `https://snbyrnes.github.io/Horizons/sitemap.xml`. Nothing is indexed quickly without this.
-2. **A custom domain** (optional but recommended): a project page under `github.io` cannot serve a `robots.txt` at the host root and ranks less well than its own domain. If you add one, set `SITE_URL` in the workflow.
-3. **Links from other sites**: ranking depends mostly on reputable sites linking here, for example professional bodies, medication safety networks and hospital pharmacy pages.
 
 ## Important
 

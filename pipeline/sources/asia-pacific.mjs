@@ -35,31 +35,6 @@ export const ASIA_PACIFIC = [
     }],
   },
   {
-    id: 'nsw-cec',
-    name: 'NSW Clinical Excellence Commission medication safety updates',
-    short: 'CEC NSW',
-    country: 'Australia',
-    region,
-    type: 'safety',
-    home: 'https://cec.health.nsw.gov.au/therapeutics-safety/medication-updates',
-    note: 'CEC publishes each update in a pop-up with no address of its own, so alerts link to the full list.',
-    linkLabel: 'Open the CEC list',
-    hints: { minSeverity: 'advisory' },
-    feeds: [{
-      adapter: 'json',
-      url: 'https://cec.health.nsw.gov.au/assets/listings/medication-updates?root=906883',
-      // Resolved shortages and retired updates are left out; the listing is newest first.
-      rows: (d) => (d.data ?? []).filter((r) => !r.status || /current/i.test(r.status)).slice(0, 80),
-      map: (r) => ({
-        title: r.tags ? `${r.name} (${String(r.tags).toLowerCase()})` : r.name,
-        url: 'https://cec.health.nsw.gov.au/therapeutics-safety/medication-updates',
-        key: r.assetId,
-        date: r.dateUpdated,
-        summary: [r.tags, r.status && `Status: ${r.status}`].filter(Boolean).join('. '),
-      }),
-    }],
-  },
-  {
     id: 'medsafe',
     name: 'Medsafe safety communications',
     short: 'Medsafe',

@@ -20,6 +20,7 @@ export const NOT_INCLUDED: { name: string; country: string; reason: string }[] =
   { name: 'CBG-MEB (Medicines Evaluation Board)', country: 'Netherlands', reason: 'News is drawn in the browser and there is no feed. Lareb covers the Netherlands for now.' },
   { name: 'Norwegian Medical Products Agency (DMP)', country: 'Norway', reason: 'News is drawn in the browser and there is no feed.' },
   { name: 'ISMP Spain', country: 'Spain', reason: 'Rate-limited our first request.' },
+  { name: 'NSW Clinical Excellence Commission medication safety updates', country: 'Australia', reason: 'Readable from an ordinary connection, but refuses requests from the servers that run our updates.' },
   { name: 'Australian Commission on Safety and Quality in Health Care', country: 'Australia', reason: 'The site did not answer automated requests when we checked.' },
   { name: 'Australian Digital Health Agency', country: 'Australia', reason: 'The site did not answer automated requests when we checked.' },
   { name: 'Safer Care Victoria safety alerts', country: 'Australia', reason: 'The site did not answer automated requests when we checked.' },
