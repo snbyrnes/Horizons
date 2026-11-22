@@ -2,9 +2,9 @@
 <rss version="2.0">
   <channel>
     <title>Horizon: medication safety in digital systems</title>
-    <link>https://example.github.io/horizon/</link>
+    <link>https://snbyrnes.github.io/Horizon/</link>
     <description>Medication safety alerts involving digital systems, collated from regulators, safety organisations and standards bodies worldwide.</description>
-    <lastBuildDate>Sun, 22 Nov 2026 22:15:38 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 22:16:04 GMT</lastBuildDate>
     <item>
       <title>PubMed: Medication Safety Risks Associated With Inappropriate Use of Non-Crushable Tablets in Enterally Fed Patients: A Nationwide Cohort Study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/43018084/</link>
@@ -217,7 +217,7 @@
       <title>PubMed: Optimizing drug utilization review alerts and clinical decision support in community pharmacy.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42927848/</link>
       <guid isPermaLink="false">541d57a7984a13</guid>
-      <pubDate>Sat, 24 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 GMT</pubDate>
       <description>Journal of the American Pharmacists Association : JAPhA. Lipp G, Szabatura AH, Praysman H et al.</description>
       <category>Decision support and alerts</category>
     </item>
@@ -225,7 +225,7 @@
       <title>PubMed: Adherence to the Age-Friendly Care 4Ms Framework and Association with Reduced Acute Care Utilization.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42904683/</link>
       <guid isPermaLink="false">4c6a4ac3424e0b</guid>
-      <pubDate>Tue, 20 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
       <description>NEJM catalyst innovations in care delivery. Pan AP, Yadav P, Diraoui H et al.</description>
 
     </item>
@@ -233,8 +233,16 @@
       <title>PubMed: Artificial intelligence in breast cancer pharmacotherapy: Treatment optimization, medication safety, and the evolving role of oncology pharmacists.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42907964/</link>
       <guid isPermaLink="false">8d1142adeb7019</guid>
-      <pubDate>Tue, 20 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
       <description>Journal of oncology pharmacy practice : official publication of the International Society of Oncology Pharmacy Practitioners. Abuzaid AAA</description>
+      <category>AI and machine learning</category>
+    </item>
+    <item>
+      <title>PubMed: Artificial Intelligence in Pharmacy Services: A Comparative Bibliometric Analysis of United States and Global Research Trends.</title>
+      <link>https://pubmed.ncbi.nlm.nih.gov/42902889/</link>
+      <guid isPermaLink="false">16df0341541ac3</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Journal of patient safety. Hao C, Fu S</description>
       <category>AI and machine learning</category>
     </item>
     <item>
@@ -246,18 +254,10 @@
       <category>Data, terminology and interoperability</category>
     </item>
     <item>
-      <title>PubMed: Artificial Intelligence in Pharmacy Services: A Comparative Bibliometric Analysis of United States and Global Research Trends.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42902889/</link>
-      <guid isPermaLink="false">16df0341541ac3</guid>
-      <pubDate>Mon, 19 Oct 2026 23:00:00 GMT</pubDate>
-      <description>Journal of patient safety. Hao C, Fu S</description>
-      <category>AI and machine learning</category>
-    </item>
-    <item>
       <title>PubMed: Trigger-first large language model-assisted adverse drug reaction surveillance: A pharmacist-supervised retrospective cohort study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42959829/</link>
       <guid isPermaLink="false">f2505267011985</guid>
-      <pubDate>Mon, 19 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
       <description>Exploratory research in clinical and social pharmacy. Liao C, Lai X, Chen W et al.</description>
       <category>AI and machine learning</category>
     </item>
@@ -265,7 +265,7 @@
       <title>PubMed: Relationship extraction for adverse drug events in clinical notes using large language models: a retrospective cross-sectional study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42892212/</link>
       <guid isPermaLink="false">b213cef15ddd19</guid>
-      <pubDate>Fri, 16 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
       <description>EBioMedicine. Plasek JM, Li Y, Amato MG et al.</description>
       <category>AI and machine learning</category>
     </item>
@@ -273,7 +273,7 @@
       <title>PubMed: Patterns of Antibiotic Prescribing for Pediatric Urinary Tract Infections in Ambulatory Care Centers: A Scoping Review.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42891660/</link>
       <guid isPermaLink="false">cc19c22e927527</guid>
-      <pubDate>Thu, 15 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
       <description>Journal of pediatric health care : official publication of National Association of Pediatric Nurse Associates &amp; Practitioners. Bush J, Lee J</description>
 
     </item>
@@ -281,7 +281,7 @@
       <title>PubMed: Artificial intelligence for medication recognition and safety: a systematic review of detection, classification, OCR, and digital health applications.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42959385/</link>
       <guid isPermaLink="false">88a3d8b4f4d45c</guid>
-      <pubDate>Wed, 14 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
       <description>Frontiers in digital health. Sai Sachin A, Karthikeyan J</description>
       <category>Software, apps and cybersecurity</category>
       <category>AI and machine learning</category>
@@ -290,7 +290,7 @@
       <title>PubMed: Implementing Taiwan National Health Insurance Quality Indicators as Clinical Quality Language on Fast Healthcare Interoperability Resources: Development and Feasibility Study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42879772/</link>
       <guid isPermaLink="false">ad506b573bdcf6</guid>
-      <pubDate>Wed, 14 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
       <description>JMIR medical informatics. Chen MC, Pei YC, Lin KJ et al.</description>
       <category>Data, terminology and interoperability</category>
     </item>
@@ -298,7 +298,7 @@
       <title>PubMed: Electronic prescribing: Implementation of a new approach to undergraduate teaching and assessment.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42876273/</link>
       <guid isPermaLink="false">c78dd8c179ee44</guid>
-      <pubDate>Wed, 14 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
       <description>British journal of clinical pharmacology. Mitha H, Wilson K, Caffrey J et al.</description>
       <category>Electronic prescribing</category>
     </item>
@@ -306,7 +306,7 @@
       <title>PubMed: [Appropriateness of strong opioid prescribing chronic non-cancer pain in primary care: a cross-sectional study].</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42874373/</link>
       <guid isPermaLink="false">d7b7491c0232ba</guid>
-      <pubDate>Tue, 13 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
       <description>Atencion primaria. Díaz-Piñeiro J, González-González JI, Infante-Peralta EB et al.</description>
 
     </item>
@@ -314,7 +314,7 @@
       <title>PubMed: Robotic Process Automation as an EHR Reliability Layer for Inpatient Care Gaps: Automating Virtual Huddles Using Secure Chat.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42869090/</link>
       <guid isPermaLink="false">44c51228ba6902</guid>
-      <pubDate>Mon, 12 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
       <description>Applied clinical informatics. Silberlust J, Martinez TR, Andreadis K et al.</description>
       <category>Electronic health records</category>
     </item>
@@ -322,9 +322,18 @@
       <title>PubMed: Mapping pharmacist roles across the chimeric antigen receptor T-cell therapy care continuum: A scoping review.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42869294/</link>
       <guid isPermaLink="false">fffe7faab9ef0d</guid>
-      <pubDate>Mon, 12 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
       <description>Journal of the American Pharmacists Association : JAPhA. Shrestha S, Pathak N, Acharya A et al.</description>
 
+    </item>
+    <item>
+      <title>PubMed: Artificial intelligence in pharmacy practice in the Middle East: a scoping review of applications, adoption, barriers, and future directions.</title>
+      <link>https://pubmed.ncbi.nlm.nih.gov/42920672/</link>
+      <guid isPermaLink="false">8304f1fa174199</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Frontiers in digital health. Alhomoud F</description>
+      <category>AI and machine learning</category>
+      <category>Software, apps and cybersecurity</category>
     </item>
     <item>
       <title>ISO: ISO/TS 20443 - Health informatics — Identification of medicinal products — Implementation for ISO 11615 data elements and structures for the unique identification and exchange of regulated medicinal product information</title>
@@ -335,19 +344,10 @@
       <category>Data, terminology and interoperability</category>
     </item>
     <item>
-      <title>PubMed: Artificial intelligence in pharmacy practice in the Middle East: a scoping review of applications, adoption, barriers, and future directions.</title>
-      <link>https://pubmed.ncbi.nlm.nih.gov/42920672/</link>
-      <guid isPermaLink="false">8304f1fa174199</guid>
-      <pubDate>Thu, 08 Oct 2026 23:00:00 GMT</pubDate>
-      <description>Frontiers in digital health. Alhomoud F</description>
-      <category>AI and machine learning</category>
-      <category>Software, apps and cybersecurity</category>
-    </item>
-    <item>
       <title>PubMed: The sociomateriality of prescribing feedback interventions: A scoping review.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42836784/</link>
       <guid isPermaLink="false">57cf1db7b081b4</guid>
-      <pubDate>Mon, 05 Oct 2026 23:00:00 GMT</pubDate>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
       <description>Medical education. Mattick K, Corrales AG, Carrieri D et al.</description>
 
     </item>
@@ -363,7 +363,7 @@
       <title>PubMed: A Narrative Review of Medication Optimisation in Older Adults with Polypharmacy: From Structured Medication Review to AI-Enabled Medication Safety.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42881678/</link>
       <guid isPermaLink="false">3b11606a120a16</guid>
-      <pubDate>Wed, 30 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
       <description>Healthcare (Basel, Switzerland). Aro R, Wojszel ZB, Duez P et al.</description>
 
     </item>
@@ -371,7 +371,7 @@
       <title>PubMed: Performance of large language models in prescription review: a comparative study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42889097/</link>
       <guid isPermaLink="false">84d2b912e563d6</guid>
-      <pubDate>Wed, 30 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
       <description>Frontiers in medicine. Huang C, Sun Y, Liu W</description>
       <category>AI and machine learning</category>
     </item>
@@ -395,7 +395,7 @@
       <title>PubMed: AI-based clinical decision support systems for antibiotic therapy in common adult infections: a systematic review from development to clinical implementation.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42877213/</link>
       <guid isPermaLink="false">42f9aef511ba23</guid>
-      <pubDate>Tue, 29 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
       <description>Frontiers in digital health. Hueda-Zavaleta M, Flores-Palacios R, Bardales-Silva F et al.</description>
       <category>Decision support and alerts</category>
       <category>AI and machine learning</category>
@@ -405,7 +405,7 @@
       <title>PubMed: Responsible implementation of artificial intelligence across the medication-use process: an evidence-informed framework for medication safety.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42823282/</link>
       <guid isPermaLink="false">888439805f0b15</guid>
-      <pubDate>Tue, 29 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
       <description>Research in social &amp; administrative pharmacy : RSAP. Gobran Y</description>
       <category>AI and machine learning</category>
     </item>
@@ -413,7 +413,7 @@
       <title>PubMed: Five Tools, One Patient: Toward a Common Output Standard for Periprocedural Anticoagulation Decision Support.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42800908/</link>
       <guid isPermaLink="false">0140359c2611d8</guid>
-      <pubDate>Sat, 26 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
       <description>The Annals of pharmacotherapy. Carter EL</description>
       <category>Decision support and alerts</category>
     </item>
@@ -421,7 +421,7 @@
       <title>PubMed: AI-enabled digital therapeutics in pharmacy practice: prescription software, medication optimization, safety surveillance, and future clinical positioning.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42779359/</link>
       <guid isPermaLink="false">578c4d30dd7e8d</guid>
-      <pubDate>Fri, 25 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
       <description>Expert review of clinical pharmacology. Zaman W, Ayaz A</description>
       <category>Software, apps and cybersecurity</category>
       <category>AI and machine learning</category>
@@ -430,7 +430,7 @@
       <title>PubMed: Electronic prescribing and patient safety: a rigour-stratified systematic review of medication error, adverse drug events, workflow, and communication.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42840262/</link>
       <guid isPermaLink="false">2178d5e29e398c</guid>
-      <pubDate>Thu, 24 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
       <description>Exploratory research in clinical and social pharmacy. Bhavana S, Patil S, Varshini RJ et al.</description>
       <category>Electronic prescribing</category>
     </item>
@@ -438,7 +438,7 @@
       <title>PubMed: Generative Artificial Intelligence Utilization and Perspectives Among Reproductive-Age Women With Systemic Autoimmune and Rheumatic Diseases.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42788866/</link>
       <guid isPermaLink="false">3949180dac92db</guid>
-      <pubDate>Thu, 24 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
       <description>Arthritis care &amp; research. Arif M, Wright C, Rodriguez S et al.</description>
       <category>AI and machine learning</category>
     </item>
@@ -446,7 +446,7 @@
       <title>PubMed: A Quantifiable 3D Closed-Loop Framework for Controlled Substance Safety in a HIMSS Electronic Medical Record Adoption Model (EMRAM) Stage 7 Hospital: Pre-Post Quality Improvement Study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42789927/</link>
       <guid isPermaLink="false">4318d58533f7cf</guid>
-      <pubDate>Thu, 24 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
       <description>JMIR medical informatics. Sun N, Su J, Yu Q et al.</description>
       <category>Electronic health records</category>
       <category>Infusion pumps and connected devices</category>
@@ -455,7 +455,7 @@
       <title>PubMed: A pilot randomized controlled trial assessing the feasibility and preliminary effects of a text message intervention to promote secure storage and disposal of prescription opioids.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42854370/</link>
       <guid isPermaLink="false">ab1fc03ec187f8</guid>
-      <pubDate>Thu, 24 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
       <description>Drug and alcohol dependence. Egan KL, Cox MJ, Helme DW et al.</description>
 
     </item>
@@ -463,7 +463,7 @@
       <title>PubMed: Impact of Medication-Related Problems in Hospitalized Patients Eligible for Palliative Care: A Prospective Cohort Study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42785578/</link>
       <guid isPermaLink="false">1d0cbdae3683b2</guid>
-      <pubDate>Wed, 23 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
       <description>Journal of pain and symptom management. Rangel JG, Ribeiro MFC, Maure A et al.</description>
 
     </item>
@@ -471,7 +471,7 @@
       <title>PubMed: RTSANet: learning sequential-attentive hybrid networks for drug information-enhanced medication recommendation.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42776859/</link>
       <guid isPermaLink="false">5c3052ee12be63</guid>
-      <pubDate>Tue, 22 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
       <description>Computer methods in biomechanics and biomedical engineering. Zhang Y, Wang Z, Du S et al.</description>
 
     </item>
@@ -479,7 +479,7 @@
       <title>PubMed: A Hybrid Rule-Based and Machine Learning-Based Clinical Decision Support System to Support Prescription Review: Development and External Validation Study.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42777235/</link>
       <guid isPermaLink="false">765e753a2d10b9</guid>
-      <pubDate>Tue, 22 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
       <description>Journal of medical Internet research. Jeong J, Heo KN, Kim AJ et al.</description>
       <category>Decision support and alerts</category>
       <category>AI and machine learning</category>
@@ -488,7 +488,7 @@
       <title>PubMed: Progress of nursing management for delirium in critically ill geriatric patients: a narrative review.</title>
       <link>https://pubmed.ncbi.nlm.nih.gov/42840403/</link>
       <guid isPermaLink="false">066223eed1b8f6</guid>
-      <pubDate>Mon, 21 Sep 2026 23:00:00 GMT</pubDate>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <description>Frontiers in human neuroscience. Mei Q, Chen X</description>
 
     </item>
