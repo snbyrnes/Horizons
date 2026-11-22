@@ -113,6 +113,20 @@ Pull requests that add a source are welcome.
 
 The build uses relative paths, so it works at `https://<user>.github.io/<repo>/` without configuration.
 
+## Search visibility
+
+The app is rendered in the browser, which search engines read poorly, so the build also writes plain HTML with [scripts/prerender.mjs](scripts/prerender.mjs):
+
+- a snapshot of the latest alerts inside `index.html` (the app replaces it on load)
+- one page per digital topic (`/topics/infusion-pumps/` and nine others) and per region (`/regions/europe/` and five others), refreshed every six hours
+- `sitemap.xml`, canonical links, Open Graph tags, a social preview image and schema.org `WebSite` and `Dataset` data
+
+Three things need the site owner:
+
+1. **Google Search Console and Bing Webmaster Tools**: verify the site and submit `https://snbyrnes.github.io/Horizons/sitemap.xml`. Nothing is indexed quickly without this.
+2. **A custom domain** (optional but recommended): a project page under `github.io` cannot serve a `robots.txt` at the host root and ranks less well than its own domain. If you add one, set `SITE_URL` in the workflow.
+3. **Links from other sites**: ranking depends mostly on reputable sites linking here, for example professional bodies, medication safety networks and hospital pharmacy pages.
+
 ## Important
 
 Horizons is a scanning aid. It links to original notices and does not replace them, and it is not a substitute for formal alerting channels such as a national central alerting system. Classification is automated and will sometimes be wrong.
