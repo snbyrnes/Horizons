@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#12203a"/>
+  <g transform="translate(80 84) scale(2.6)">
+    <path d="M7 20a9 9 0 0 1 18 0" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M3 25h26" stroke="#a99cff" stroke-width="2.8" stroke-linecap="round"/>
+  </g>
+  <text x="180" y="146" font-size="56" font-weight="800" fill="#ffffff">Horizons</text>
+  <text x="80" y="290" font-size="68" font-weight="800" fill="#ffffff">Medication safety alerts,</text>
+  <text x="80" y="372" font-size="68" font-weight="800" fill="#ffffff">worldwide</text>
+  <text x="80" y="446" font-size="30" fill="#c3cde0">From regulators, safety organisations and standards bodies.</text>
+  <text x="80" y="488" font-size="30" fill="#c3cde0">Updated every six hours.</text>
+  <rect x="80" y="528" width="16" height="16" rx="8" fill="#a99cff"/>
+  <text x="108" y="544" font-size="26" font-weight="700" fill="#a99cff">With a lens on digital systems: ePrescribing, EHRs, pumps, software, AI</text>
+  <rect x="0" y="0" width="14" height="630" fill="#b0112b"/>
+  <rect x="0" y="210" width="14" height="210" fill="#a84a00"/>
+  <rect x="0" y="420" width="14" height="210" fill="#08678a"/>
+</svg>

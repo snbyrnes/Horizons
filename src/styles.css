@@ -308,6 +308,21 @@ button { cursor: pointer; }
 .ask-actions { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
 .ask-more { color: var(--digital); font-weight: 600; font-size: 0.94rem; }
 
+/* ---------- Static topic and region pages (written by scripts/prerender.mjs) ---------- */
+
+.static-actions { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin: 22px 0 26px; }
+.static-updated { color: var(--muted); font-size: 0.92rem; }
+a.row-title { text-decoration: none; }
+a.row-title:hover { text-decoration: underline; }
+.browse { display: grid; gap: 8px 48px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--line); }
+.page .browse h2 { font-size: 1rem; margin: 24px 0 8px; }
+.browse ul { display: grid; gap: 4px; }
+.browse a { color: var(--digital); font-weight: 600; font-size: 0.94rem; }
+.foot .browse { margin-top: 4px; padding-top: 0; border-top: 0; }
+.foot .browse h2 { font-size: 0.9rem; margin: 10px 0 6px; color: var(--ink); }
+.foot .browse ul { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.foot .browse a { font-weight: 500; font-size: 0.88rem; color: var(--muted); }
+
 /* ---------- Footer ---------- */
 
 .foot { border-top: 1px solid var(--line); padding-block: 24px 40px; color: var(--muted); font-size: 0.9rem; display: grid; gap: 6px; }

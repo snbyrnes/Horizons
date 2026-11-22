@@ -20,6 +20,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # Used for canonical links, the sitemap and the RSS feed. Change it if you add a custom domain.
+      SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -32,8 +35,6 @@ jobs:
       - name: Fetch alerts
         # A failed fetch must not block the deploy: the site is rebuilt from the last good data.
         continue-on-error: true
-        env:
-          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: npm run fetch
 
       - name: Commit refreshed data

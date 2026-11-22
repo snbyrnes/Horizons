@@ -1,0 +1,62 @@
+{
+  "topics": {
+    "eprescribing": {
+      "slug": "electronic-prescribing",
+      "name": "Electronic prescribing",
+      "about": "ePrescribing, computerised order entry (CPOE), electronic medication administration records and order sets"
+    },
+    "ehr": {
+      "slug": "electronic-health-records",
+      "name": "Electronic health records",
+      "about": "electronic health and medical records, pharmacy and GP systems, patient portals and system downtime"
+    },
+    "cds": {
+      "slug": "clinical-decision-support",
+      "name": "Clinical decision support",
+      "about": "clinical decision support, drug interaction and allergy alerts, alert fatigue and overrides"
+    },
+    "pumps": {
+      "slug": "infusion-pumps",
+      "name": "Infusion pumps and connected devices",
+      "about": "smart infusion pumps and drug libraries, syringe drivers, insulin pumps and continuous glucose monitors"
+    },
+    "dispensing": {
+      "slug": "automated-dispensing",
+      "name": "Automated dispensing and compounding",
+      "about": "automated dispensing cabinets, pharmacy robots, compounding devices and dispensing software"
+    },
+    "barcode": {
+      "slug": "barcode-medication-administration",
+      "name": "Barcode and scanning",
+      "about": "barcode medication administration, product barcodes, scanning and serialisation"
+    },
+    "interop": {
+      "slug": "medicines-data-and-interoperability",
+      "name": "Data, terminology and interoperability",
+      "about": "drug databases and terminologies, interfaces, data migration, transfer-of-care messages and health informatics standards"
+    },
+    "software": {
+      "slug": "software-and-cybersecurity",
+      "name": "Software, apps and cybersecurity",
+      "about": "software defects and updates, firmware, health apps, cybersecurity and algorithms"
+    },
+    "ai": {
+      "slug": "artificial-intelligence",
+      "name": "AI and machine learning",
+      "about": "artificial intelligence and machine learning tools, scribes, chatbots and predictive models"
+    },
+    "telehealth": {
+      "slug": "telehealth-and-online-prescribing",
+      "name": "Telehealth and online supply",
+      "about": "telehealth, remote and online prescribing, and online pharmacies"
+    }
+  },
+  "regions": {
+    "Global": "global",
+    "UK and Ireland": "uk-and-ireland",
+    "Europe": "europe",
+    "North America": "north-america",
+    "Asia-Pacific": "asia-pacific",
+    "Rest of world": "africa-and-latin-america"
+  }
+}

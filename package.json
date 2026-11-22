@@ -6,7 +6,7 @@
   "description": "Horizons: global medication safety alerts, with a lens on digital systems",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "fetch": "node pipeline/run.mjs",
     "test": "node --test \"pipeline/*.test.mjs\""

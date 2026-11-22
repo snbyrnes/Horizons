@@ -3,11 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Medication safety alerts from regulators, safety organisations and standards bodies worldwide, with a lens on digital systems." />
+    <title>Horizons: medication safety alerts worldwide, with a digital systems lens</title>
+    <meta name="description" content="Free, automatically updated tracker of medication safety alerts, medicine recalls and guidance from regulators and safety organisations worldwide. Filter to ePrescribing, electronic health record, infusion pump, dispensing automation, software and AI issues." />
+    <link rel="canonical" href="__SITE_URL__/" />
+    <meta name="robots" content="index, follow, max-snippet:-1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Horizons" />
+    <meta property="og:title" content="Horizons: medication safety alerts worldwide" />
+    <meta property="og:description" content="Medication safety alerts, recalls and guidance from regulators and safety organisations worldwide, with a lens on digital systems. Updated every six hours." />
+    <meta property="og:url" content="__SITE_URL__/" />
+    <meta property="og:image" content="__SITE_URL__/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#12203a" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title="Horizons: medication safety in digital systems" href="./feed.xml" />
-    <title>Horizons: medication safety alerts</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Horizons",
+            "alternateName": "Horizons medication safety alerts",
+            "url": "__SITE_URL__/",
+            "description": "Medication safety alerts, recalls and guidance from regulators and safety organisations worldwide, with a lens on medication safety in digital systems.",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "Dataset",
+            "name": "Horizons medication safety alerts",
+            "description": "Titles, dates, links and classifications of medication safety alerts, recalls, shortages, guidance and research collated from regulators, safety organisations, healthcare bodies and standards bodies worldwide. Each record is tagged for severity and for digital-system topics such as electronic prescribing, electronic health records, clinical decision support, infusion pumps, automated dispensing, barcoding, interoperability, software and AI.",
+            "url": "__SITE_URL__/",
+            "keywords": ["medication safety", "medication errors", "patient safety alerts", "drug recalls", "digital medication safety", "electronic prescribing", "health IT safety", "infusion pumps", "clinical decision support", "pharmacovigilance"],
+            "isAccessibleForFree": true,
+            "distribution": [
+              { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "__SITE_URL__/data/alerts.json" },
+              { "@type": "DataDownload", "encodingFormat": "application/rss+xml", "contentUrl": "__SITE_URL__/feed.xml" }
+            ]
+          }
+        ]
+      }
+    </script>
     <script>
       try { var t = localStorage.getItem('horizon.theme'); if (t) document.documentElement.dataset.theme = t } catch (e) {}
     </script>

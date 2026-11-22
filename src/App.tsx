@@ -5,6 +5,14 @@ import { Sources } from './Sources'
 import { Method } from './Method'
 import { Feedback } from './Feedback'
 import { REPO_URL } from './community'
+import staticPages from './static-pages.json'
+
+const TITLES: Record<string, string> = {
+  alerts: 'Horizons: medication safety alerts worldwide, with a digital systems lens',
+  sources: 'Sources: who Horizons collects medication safety alerts from',
+  method: 'How Horizons works: sources, digital tagging and severity',
+  feedback: 'Feedback: suggest a source or report a problem | Horizons',
+}
 
 type Route = { view: 'alerts' | 'sources' | 'method' | 'feedback'; query: string }
 
@@ -65,6 +73,7 @@ export default function App() {
 
   useEffect(() => {
     if (route.view !== 'alerts') window.scrollTo(0, 0)
+    document.title = TITLES[route.view]
   }, [route.view])
 
   const nav = [
@@ -126,6 +135,24 @@ export default function App() {
           <span aria-hidden="true"> | </span>
           <a href={REPO_URL} target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
         </p>
+        <nav className="browse" aria-label="Topic and region pages">
+          <div>
+            <h2>Digital medication safety topics</h2>
+            <ul>
+              {Object.values(staticPages.topics).map((t) => (
+                <li key={t.slug}><a href={`./topics/${t.slug}/`}>{t.name}</a></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2>Medication safety alerts by region</h2>
+            <ul>
+              {Object.entries(staticPages.regions).map(([name, slug]) => (
+                <li key={slug}><a href={`./regions/${slug}/`}>{name === 'Rest of world' ? 'Africa and Latin America' : name}</a></li>
+              ))}
+            </ul>
+          </div>
+        </nav>
       </footer>
     </>
   )
