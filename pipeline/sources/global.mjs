@@ -13,7 +13,7 @@ export const GLOBAL = [
     region,
     type: 'healthcare',
     home: 'https://www.who.int/teams/regulation-prequalification/incidents-and-SF/full-list-of-who-medical-product-alerts',
-    hints: { kind: 'alert', minSeverity: 'critical' },
+    hints: { kind: 'alert', minSeverity: 'high', publisherClass: 'WHO Medical Product Alert' },
     feeds: [{
       adapter: 'html',
       url: 'https://www.who.int/teams/regulation-prequalification/incidents-and-SF/full-list-of-who-medical-product-alerts',
@@ -64,19 +64,6 @@ export const GLOBAL = [
     }],
   },
   {
-    id: 'iso-health-informatics',
-    name: 'ISO health informatics standards (ICS 35.240.80, mostly ISO/TC 215)',
-    short: 'ISO',
-    country: 'International',
-    region,
-    type: 'standards',
-    home: 'https://www.iso.org/ics/35.240.80/x/',
-    note: 'Standards in development or newly published that concern medicines.',
-    filter: 'medication-digital',
-    hints: { kind: 'guidance', maxSeverity: 'info' },
-    feeds: [{ url: 'https://www.iso.org/contents/data/ics/35.240.80.rss', include: 'medicinal product|medication|prescri|pharmac|dose|IDMP|drug', exclude: 'traditional chinese' }],
-  },
-  {
     id: 'pubmed',
     name: 'PubMed: new research on medication safety in digital systems',
     short: 'PubMed',
@@ -85,7 +72,7 @@ export const GLOBAL = [
     type: 'research',
     home: 'https://pubmed.ncbi.nlm.nih.gov/',
     note: 'Peer-reviewed papers matching a fixed search on medication errors and health IT.',
-    hints: { kind: 'research', maxSeverity: 'info', digital: true },
+    hints: { kind: 'research', maxSeverity: 'info' },
     feeds: [{ adapter: 'pubmed', query: PUBMED_QUERY, days: 180, limit: 150 }],
   },
 ]

@@ -142,7 +142,8 @@ export function parseFeed(body) {
       out.push({
         title: text(e.title),
         url: typeof link === 'object' ? link['@_href'] : text(link),
-        date: text(e.updated) || text(e.published),
+        // Publication date first: "updated" changes whenever a publisher edits an old page.
+        date: text(e.published) || text(e.updated),
         summary: text(e.summary) || text(e.content),
       })
     }

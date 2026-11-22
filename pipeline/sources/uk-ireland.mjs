@@ -116,6 +116,6 @@ export const UK_IRELAND = [
     region,
     type: 'safety',
     home: 'https://imsn.ie/',
-    feeds: [{ url: 'https://imsn.ie/feed/' }],
+    feeds: [{ url: 'https://imsn.ie/feed/', exclude: 'poster|presentation|conference' }],
   },
 ]

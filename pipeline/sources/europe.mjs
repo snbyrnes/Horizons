@@ -50,8 +50,9 @@ export const EUROPE = [
       {
         adapter: 'json',
         url: `${EMA_DATA}/shortages-output-json-report_en.json`,
-        rows: (d) => d.data ?? [],
-        map: (r) => ({ title: `Shortage: ${r.medicine_affected}`, url: r.shortage_url, date: r.last_updated_date || r.first_published_date, summary: r.supply_shortage_status }),
+        // Ongoing shortages only, dated when first announced, so resolved ones do not resurface.
+        rows: (d) => (d.data ?? []).filter((r) => !/resolved/i.test(r.supply_shortage_status ?? '')),
+        map: (r) => ({ title: `Shortage: ${r.medicine_affected}`, url: r.shortage_url, date: r.first_published_date || r.last_updated_date, summary: r.supply_shortage_status }),
         hints: { kind: 'shortage', maxSeverity: 'advisory' },
       },
     ],
@@ -111,6 +112,7 @@ export const EUROPE = [
       url: 'https://ansm.sante.fr/informations-de-securite/',
       // Medicines only: the page also lists devices, diagnostics and cosmetics.
       select: { item: 'article.article-item:has(span.article-health-product:contains("dicament"))', title: 'span.article-title', date: 'span.article-date', summary: 'span.article-content' },
+      hints: { kind: 'alert' },
       // In vitro diagnostics and cosmetics are out of scope.
       exclude: 'biochimie|réactif|reactif|diagnostic|cosm[ée]tique|tatouage',
     }],
@@ -139,8 +141,8 @@ export const EUROPE = [
     type: 'safety',
     lang: 'nl',
     home: 'https://www.lareb.nl/',
-    hints: { kind: 'alert', maxSeverity: 'advisory' },
-    feeds: [{ url: 'https://www.lareb.nl/rss', take: 30 }],
+    hints: { maxSeverity: 'high' },
+    feeds: [{ url: 'https://www.lareb.nl/rss', take: 30, exclude: 'deel jouw ervaring|vragenlijst' }],
   },
   {
     id: 'aemps',
@@ -151,7 +153,8 @@ export const EUROPE = [
     type: 'regulator',
     lang: 'es',
     home: 'https://www.aemps.gob.es/',
-    feeds: [{ url: 'https://www.aemps.gob.es/feed/', include: 'seguridad|riesgo|retirada|alerta|defecto|error|falsificad|suministro|desabastec|digital|software|electr[óo]nic' }],
+    feeds: [{ url: 'https://www.aemps.gob.es/feed/', include: 'seguridad|riesgo|retirada|alerta|defecto|error|falsificad|suministro|desabastec|digital|software|electr[óo]nic', exclude: 'cosm[ée]tic|marcado CE|elevaci[óo]n de pacientes|asideros|productos? sanitarios?' }],
+    filter: 'medication',
   },
   {
     id: 'aifa',
@@ -188,7 +191,8 @@ export const EUROPE = [
     region,
     type: 'regulator',
     home: 'https://laegemiddelstyrelsen.dk/en/',
-    feeds: [{ url: 'https://laegemiddelstyrelsen.dk/en/Feeds/rss-feed/', include: SAFETY_EN }],
+    filter: 'medication',
+    feeds: [{ url: 'https://laegemiddelstyrelsen.dk/en/Feeds/rss-feed/', include: SAFETY_EN, exclude: 'operation pangea' }],
   },
   {
     id: 'fimea',
@@ -198,6 +202,7 @@ export const EUROPE = [
     region,
     type: 'regulator',
     home: 'https://fimea.fi/en/',
-    feeds: [{ url: 'https://fimea.fi/en/current-events/-/asset_publisher/6Fp1W0OnZUR7/rss', include: SAFETY_EN }],
+    filter: 'medication',
+    feeds: [{ url: 'https://fimea.fi/en/current-events/-/asset_publisher/6Fp1W0OnZUR7/rss', include: SAFETY_EN, exclude: 'NIS2|clinical trials information system' }],
   },
 ]

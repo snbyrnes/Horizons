@@ -1,4 +1,4 @@
-import { useState, type RefObject } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { KIND_LABELS, REGIONS, SEVERITIES, TYPE_LABELS, type Dataset, type FacetKey, type Filters } from './data'
 
 interface Props {
@@ -7,22 +7,49 @@ interface Props {
   counts: Record<FacetKey, Record<string, number>>
   patch: (p: Partial<Filters>) => void
   savedCount: number
+  /** On narrow screens the rail is a dialog; on wide screens it is always visible. */
   open: boolean
   onClose: () => void
-  searchRef: RefObject<HTMLInputElement | null>
 }
 
-export function FilterRail({ data, filters, counts, patch, savedCount, open, onClose, searchRef }: Props) {
+const FOCUSABLE = 'button, input, select, a[href]'
+
+export function FilterRail({ data, filters, counts, patch, savedCount, open, onClose }: Props) {
+  const rail = useRef<HTMLElement>(null)
+  const done = useRef<HTMLButtonElement>(null)
+
+  // Dialog behaviour while open: move focus in, keep it in, close on Escape, stop the page scrolling behind.
+  useEffect(() => {
+    if (!open) return
+    done.current?.focus()
+    const overflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+      if (e.key !== 'Tab' || !rail.current) return
+      const items = [...rail.current.querySelectorAll<HTMLElement>(FOCUSABLE)].filter((el) => el.offsetParent !== null)
+      const first = items[0]
+      const last = items.at(-1)
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last?.focus() }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus() }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = overflow
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [open, onClose])
+
   const toggle = (key: FacetKey, id: string) => {
     const cur = filters[key]
     patch({ [key]: cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id] })
   }
 
-  const group = (key: FacetKey, title: string, options: { id: string; label: string; help?: string }[], extraClass = '') => {
+  const group = (key: FacetKey, title: string, options: { id: string; label: string; help?: string }[]) => {
     const shown = options.filter((o) => counts[key][o.id] || filters[key].includes(o.id))
     if (!shown.length) return null
     return (
-      <fieldset className={`facet ${extraClass}`}>
+      <fieldset className="facet">
         <legend>{title}</legend>
         {shown.map((o) => (
           <label key={o.id} className="check" title={o.help}>
@@ -35,36 +62,41 @@ export function FilterRail({ data, filters, counts, patch, savedCount, open, onC
     )
   }
 
+  const byCount = (key: FacetKey) => (a: { id: string; label: string }, b: { id: string; label: string }) =>
+    (counts[key][b.id] ?? 0) - (counts[key][a.id] ?? 0) || a.label.localeCompare(b.label)
+
+  const [allCountries, setAllCountries] = useState(false)
+  const countryOptions = [...new Set(data.sources.map((s) => s.country))].map((c) => ({ id: c, label: c })).sort(byCount('country'))
+  const visibleCountries = allCountries ? countryOptions : countryOptions.filter((o, i) => i < 8 || filters.country.includes(o.id))
+
   const [allSources, setAllSources] = useState(false)
-  const sourceOptions = data.sources
-    .map((s) => ({ id: s.id, label: s.short, help: s.name }))
-    .sort((a, b) => (counts.source[b.id] ?? 0) - (counts.source[a.id] ?? 0) || a.label.localeCompare(b.label))
+  const sourceOptions = data.sources.map((s) => ({ id: s.id, label: s.short, help: s.name })).sort(byCount('source'))
   const visibleSources = allSources ? sourceOptions : sourceOptions.filter((o, i) => i < 8 || filters.source.includes(o.id))
 
   return (
     <>
-      {open && <div className="scrim" onClick={onClose} />}
-      <aside className={`rail${open ? ' is-open' : ''}`} aria-label="Filters">
+      {open && <button className="scrim" aria-label="Close filters" onClick={onClose} />}
+      <aside
+        ref={rail}
+        className={`rail${open ? ' is-open' : ''}`}
+        aria-label="Filters"
+        role={open ? 'dialog' : undefined}
+        aria-modal={open ? true : undefined}
+      >
         <div className="rail-head">
           <strong>Filters</strong>
-          <button className="btn" onClick={onClose}>Done</button>
+          <button ref={done} className="btn" onClick={onClose}>Done</button>
         </div>
 
-        <label className="search">
-          <span className="visually-hidden">Search alerts</span>
-          <input
-            ref={searchRef}
-            type="search"
-            placeholder="Search alerts, for example insulin pump"
-            value={filters.q}
-            onChange={(e) => patch({ q: e.target.value })}
-          />
-          <kbd aria-hidden="true">/</kbd>
-        </label>
-
         {group('sev', 'Severity', SEVERITIES)}
-        {group('topic', 'Digital topic', Object.entries(data.topics).map(([id, label]) => ({ id, label })), 'facet-topic')}
+        {group('topic', 'Digital topic', Object.entries(data.topics).map(([id, label]) => ({ id, label })))}
         {group('region', 'Region', REGIONS.map((r) => ({ id: r, label: r })))}
+        {group('country', 'Country', visibleCountries)}
+        {countryOptions.length > 8 && (
+          <button className="link-btn" onClick={() => setAllCountries(!allCountries)}>
+            {allCountries ? 'Show fewer countries' : `Show all ${countryOptions.length} countries`}
+          </button>
+        )}
         {group('type', 'Published by', Object.entries(TYPE_LABELS).map(([id, label]) => ({ id, label })))}
         {group('kind', 'Type of notice', Object.entries(KIND_LABELS).map(([id, label]) => ({ id, label })))}
         {group('source', 'Organisation', visibleSources)}

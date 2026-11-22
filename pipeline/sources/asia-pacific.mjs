@@ -1,13 +1,4 @@
 const region = 'Asia-Pacific'
-const year = new Date().getUTCFullYear()
-const HK = (group) => ({
-  adapter: 'html',
-  url: `https://www.drugoffice.gov.hk/eps/news/listNews/en/healthcare_providers/${group}?search_year=${year}`,
-  // The endpoint returns bare table rows.
-  select: { wrap: 'table', item: 'tr', title: 'a.newsLink', date: 'td:first-child' },
-  take: 25,
-})
-
 // Fail fast: when tga.gov.au does not answer it hangs rather than refusing.
 const TGA_FETCH = { timeout: 15000, retries: 0 }
 
@@ -51,11 +42,14 @@ export const ASIA_PACIFIC = [
     region,
     type: 'safety',
     home: 'https://cec.health.nsw.gov.au/therapeutics-safety/medication-updates',
+    note: 'CEC publishes each update in a pop-up with no address of its own, so alerts link to the full list.',
+    linkLabel: 'Open the CEC list',
     hints: { minSeverity: 'advisory' },
     feeds: [{
       adapter: 'json',
       url: 'https://cec.health.nsw.gov.au/assets/listings/medication-updates?root=906883',
-      rows: (d) => (d.data ?? []).slice(0, 80),
+      // Resolved shortages and retired updates are left out; the listing is newest first.
+      rows: (d) => (d.data ?? []).filter((r) => !r.status || /current/i.test(r.status)).slice(0, 80),
       map: (r) => ({
         title: r.tags ? `${r.name} (${String(r.tags).toLowerCase()})` : r.name,
         url: 'https://cec.health.nsw.gov.au/therapeutics-safety/medication-updates',
@@ -77,7 +71,8 @@ export const ASIA_PACIFIC = [
     feeds: [{
       adapter: 'html',
       url: 'https://www.medsafe.govt.nz/safety/SafetyCommunications.asp',
-      select: { item: '#content-area table tr:has(td a)', title: 'td:nth-child(4) a', date: 'td:nth-child(1)', summary: 'td:nth-child(2)' },
+      // Medicines only; the table also lists device notices such as beds and hoists.
+      select: { item: '#content-area table tr:has(td a):has(td:nth-child(3):contains("Medicine"))', title: 'td:nth-child(4) a', date: 'td:nth-child(1)', summary: 'td:nth-child(2)' },
     }],
   },
   {
@@ -120,19 +115,8 @@ export const ASIA_PACIFIC = [
     home: 'https://www.pmda.go.jp/english/safety/index.html',
     feeds: [
       { url: 'https://www.pmda.go.jp/rss_013.xml' },
-      { url: 'https://www.pmda.go.jp/rss_008.xml', include: 'ANZEN|safety|risk|caution|recall' },
+      { url: 'https://www.pmda.go.jp/rss_008.xml', include: 'ANZEN|safety|risk|caution|recall', exclude: 'SHINSA|companion diagnostic' },
     ],
-  },
-  {
-    id: 'hk-drug-office',
-    name: 'Hong Kong Drug Office safety alerts and medicine recalls',
-    short: 'HK Drug Office',
-    country: 'Hong Kong',
-    region,
-    type: 'regulator',
-    home: 'https://www.drugoffice.gov.hk/eps/do/en/healthcare_providers/news_informations/safety_alerts_and_medical_recalls/index.html',
-    note: 'Includes a digest of safety news from regulators in other countries.',
-    feeds: [{ ...HK(8), hints: { kind: 'alert' } }, { ...HK(11), hints: { kind: 'recall' } }],
   },
   {
     id: 'drap',

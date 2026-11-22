@@ -1,4 +1,4 @@
-const region = 'Rest of world'
+const region = 'Africa and Latin America'
 const SAFETY = 'recall|safety|alert|warning|falsif|counterfeit|substandard|withdraw|adverse|pharmacovigilance|digital|electronic'
 
 export const REST_OF_WORLD = [
@@ -33,11 +33,11 @@ export const REST_OF_WORLD = [
     type: 'regulator',
     lang: 'es',
     home: 'https://www.argentina.gob.ar/anmat/alertas/medicamentos',
-    hints: { kind: 'alert', minSeverity: 'high' },
     feeds: [{
       adapter: 'html',
       url: 'https://www.argentina.gob.ar/anmat/alertas/medicamentos',
       select: { item: 'a.panel.panel-default[href]', title: 'h3', date: 'time' },
+      exclude: 'levant[óo]|habilitaci[óo]n',
     }],
   },
 ]

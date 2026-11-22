@@ -2,7 +2,7 @@
 
 **Live site: https://snbyrnes.github.io/Horizons/**
 
-Medication safety alerts from regulators, safety organisations, healthcare bodies and standards bodies worldwide, with a lens on **medication safety in digital systems** (ePrescribing, health records, decision support, infusion pumps, dispensing automation, barcoding, interoperability, software and AI).
+Medication safety alerts from regulators, safety organisations and healthcare bodies worldwide, with a lens on **medication safety in digital systems** (ePrescribing, health records, decision support, infusion pumps, dispensing automation, barcoding, interoperability, software and AI).
 
 Horizons is a static site. A scheduled GitHub Actions job gathers the alerts, commits the refreshed data, and redeploys GitHub Pages. There is no server and no API key.
 
@@ -14,8 +14,8 @@ Horizons is a static site. A scheduled GitHub Actions job gathers the alerts, co
 GitHub Actions (every 6 hours)
   └─ npm run fetch        pipeline/run.mjs reads every source in pipeline/sources/
        ├─ adapters.mjs    RSS/Atom, HTML listings, GOV.UK, openFDA, Health Canada, PubMed, ...
-       ├─ classify.mjs    keyword rules: digital topics, severity, type of notice
-       └─ writes          public/data/alerts.json, public/data/sources.json, public/feed.xml
+       ├─ classify.mjs    publisher class first, then keyword rules: severity, digital topics, type of notice
+       └─ writes          public/data/*.json, public/feed.xml, public/feed-all.xml
   └─ git commit           the data files (history is kept for two years)
   └─ npm run build        Vite + React + TypeScript
   └─ deploy               GitHub Pages

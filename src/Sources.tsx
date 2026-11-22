@@ -1,8 +1,9 @@
 import { newIssue, NOT_INCLUDED } from './community'
-import { plural, REGIONS, shortDate, timeAgo, TYPE_LABELS, type Dataset, type Source } from './data'
+import { languageName, plural, REGIONS, shortDate, timeAgo, TYPE_LABELS, type Dataset, type Source } from './data'
 
 const STATUS: Record<Source['status'], string> = {
   ok: 'Working',
+  quiet: 'Quiet',
   partial: 'Partly working',
   empty: 'No items returned',
   error: 'Not reachable',
@@ -18,13 +19,16 @@ const TYPE_ONE: Record<string, string> = {
 
 export function Sources({ data, now }: { data: Dataset; now: number }) {
   const failing = data.sources.filter((s) => s.status === 'error')
+  const quiet = data.sources.filter((s) => s.status === 'quiet').length
   const countries = new Set(data.sources.map((s) => s.country)).size
   return (
     <article className="page">
       <h1>{data.sources.length} sources across {countries} countries and regions</h1>
       <p className="lede">
         Horizons checks each of these every six hours. Last check finished {timeAgo(data.generatedAt, now)}
-        {failing.length ? `; ${plural(failing.length, 'source')} could not be reached and will be retried.` : ', and every source responded.'}
+        {failing.length ? `; ${plural(failing.length, 'source')} could not be reached and will be retried.` : ', and every source responded.'}{' '}
+        {quiet > 0 && `${plural(quiet, 'source')} responded but had nothing in scope recently, which is normal for bodies that publish rarely. `}
+        <a href="#not-included" onClick={(e) => { e.preventDefault(); document.getElementById('not-included')?.scrollIntoView() }}>See the sources we could not include</a>.
       </p>
 
       {REGIONS.map((region) => {
@@ -50,7 +54,7 @@ export function Sources({ data, now }: { data: Dataset; now: number }) {
                     <tr key={s.id}>
                       <th scope="row">
                         <a href={s.home} target="_blank" rel="noopener noreferrer">{s.name}</a>
-                        <span className="src-country">{s.country}{s.lang !== 'en' ? `, in ${new Intl.DisplayNames(undefined, { type: 'language' }).of(s.lang)}` : ''}</span>
+                        <span className="src-country">{s.country}{s.lang !== 'en' ? `, in ${languageName(s.lang)}` : ''}</span>
                         {s.note && <span className="src-note">{s.note}</span>}
                       </th>
                       <td>{TYPE_ONE[s.type] ?? TYPE_LABELS[s.type] ?? s.type}</td>
@@ -62,7 +66,9 @@ export function Sources({ data, now }: { data: Dataset; now: number }) {
                       </td>
                       <td>{s.latest ? shortDate(s.latest) : 'None yet'}</td>
                       <td>
-                        <span className={`status status-${s.status}`} title={s.error}>{STATUS[s.status]}</span>
+                        <span className={`status status-${s.status}`}>{STATUS[s.status]}</span>
+                        {s.status === 'quiet' && <span className="src-note">{s.count ? 'Nothing in scope for four months' : 'Responding, but nothing in scope yet'}</span>}
+                        {s.error && <span className="src-error">{s.error.replace(/https?:\/\/\S+:\s*/g, '')}</span>}
                         {s.status === 'error' && s.lastSuccess && <span className="src-note">Last worked {shortDate(s.lastSuccess)}</span>}
                       </td>
                     </tr>

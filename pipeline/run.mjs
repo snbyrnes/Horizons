@@ -11,7 +11,11 @@ import { hashId, mapLimit, parseDate, toPlain } from './lib.mjs'
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const DATA_DIR = path.join(ROOT, 'public', 'data')
 const RETAIN_DAYS = 730
-const MAX_PER_SOURCE = 200
+const MAX_PER_SOURCE = 300
+const QUIET_DAYS = 120
+// Bump when filters or classification change in a way that should re-evaluate stored alerts.
+// Stored alerts are then rebuilt from the sources; only their first-seen dates carry over.
+const SCHEMA = 2
 const SITE_URL = (process.env.SITE_URL || 'https://example.github.io/horizons').replace(/\/$/, '')
 
 const args = process.argv.slice(2)
@@ -28,6 +32,8 @@ function keep(source, c) {
     // A generic software fault in an unrelated device (say, a wheelchair) is out of scope.
     case 'medication': return c.medication || c.topics.some((t) => t !== 'software')
     case 'medication-digital': return c.medication && c.digital
+    // For general safety blogs, where a digital topic alone (say, AI in infection control) is off-topic.
+    case 'medication-only': return c.medication
     default: return true
   }
 }
@@ -52,13 +58,17 @@ async function collect(source, now) {
         seen.add(id)
         let summary = toPlain(r.summary)
         if (/^The post .* appeared first on /i.test(summary)) summary = '' // WordPress boilerplate
+        summary = summary.replace(/^Generar PDF\s*/i, '').replace(/^Fecha de publicaci[óo]n:\s*[^.]{0,40}?\d{4}\s*/i, '')
         let published = parseDate(r.date, { dayFirst: source.dayFirst ?? true })
         const dated = Boolean(published)
-        if (!published || Date.parse(published) > now + 2 * 864e5) published = null
+        // A date in the future is a publisher's issue date, not when the notice appeared.
+        const future = Boolean(published) && Date.parse(published) > now
+        if (future) published = new Date(now).toISOString()
+        // Midnight UTC means the publisher gave a date with no time. Noon keeps it on that
+        // calendar day for readers in most time zones.
+        if (published?.endsWith('T00:00:00.000Z')) published = published.replace('T00:00', 'T12:00')
         const hints = { ...source.hints, ...feed.hints }
         const c = classify({ title, summary }, hints)
-        // Some sources are digital by construction (for example a literature search on health IT).
-        if (hints.digital) c.digital = true
         if (!keep({ filter: feed.filter ?? source.filter }, c)) continue
         alerts.push({
           id,
@@ -69,6 +79,9 @@ async function collect(source, now) {
           dated,
           summary: summary === title ? '' : summary,
           severity: c.severity,
+          pclass: c.publisherClass ?? undefined,
+          future: future || undefined,
+          linkLabel: source.linkLabel,
           kind: c.kind,
           digital: c.digital,
           topics: c.topics,
@@ -95,10 +108,10 @@ function notRepeat() {
   }
 }
 
-function buildRss(alerts, sourcesById, generatedAt) {
+function buildRss(alerts, sourcesById, generatedAt, { title, description }) {
   const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' })[ch])
   const items = alerts.slice(0, 60).map((a) => `    <item>
-      <title>${esc(`${sourcesById[a.source]?.short ?? a.source}: ${a.title}`)}</title>
+      <title>${esc(`${sourcesById[a.source]?.short ?? a.source}${a.pclass ? ` (${a.pclass})` : ''}: ${a.title}`)}</title>
       <link>${esc(a.url)}</link>
       <guid isPermaLink="false">${a.id}</guid>
       <pubDate>${new Date(a.published).toUTCString()}</pubDate>
@@ -108,9 +121,9 @@ ${a.topics.map((t) => `      <category>${esc(TOPIC_LABELS[t])}</category>`).join
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Horizons: medication safety in digital systems</title>
+    <title>${esc(title)}</title>
     <link>${esc(SITE_URL)}/</link>
-    <description>Medication safety alerts involving digital systems, collated from regulators, safety organisations and standards bodies worldwide.</description>
+    <description>${esc(description)}</description>
     <lastBuildDate>${new Date(generatedAt).toUTCString()}</lastBuildDate>
 ${items.join('\n')}
   </channel>
@@ -124,7 +137,10 @@ async function main() {
   const prev = await readJson(path.join(DATA_DIR, 'alerts.json'), { alerts: [] })
   const prevStatus = await readJson(path.join(DATA_DIR, 'sources.json'), { sources: [] })
   const prevStatusById = Object.fromEntries(prevStatus.sources.map((s) => [s.id, s]))
-  const byId = new Map(prev.alerts.map((a) => [a.id, a]))
+  const rebuild = prev.schema !== SCHEMA
+  const prevById = new Map(prev.alerts.map((a) => [a.id, a]))
+  const byId = new Map(rebuild ? [] : prev.alerts.map((a) => [a.id, a]))
+  if (rebuild && prev.alerts.length) console.log(`Data schema changed to ${SCHEMA}: rebuilding stored alerts from the sources`)
 
   const active = SOURCES.filter((s) => !only || only.includes(s.id))
   const results = await mapLimit(active, 6, async (source) => {
@@ -142,10 +158,15 @@ async function main() {
     const known = prev.alerts.some((a) => a.source === source.id)
     let undatedBacklog = 0
     for (const a of alerts) {
-      const old = byId.get(a.id)
+      // On a rebuild the previous record still supplies dates we assigned ourselves.
+      const old = byId.get(a.id) ?? prevById.get(a.id)
       // Undated items take the time we first saw them. On a source's first load that would
       // flood "today", so the backlog is spread one per day in listing order instead.
-      if (!a.published) {
+      if (a.future) {
+        // Keep the day we first saw it rather than sliding forward on every run.
+        if (old) a.published = old.published
+        delete a.future
+      } else if (!a.published) {
         if (old) a.published = old.published
         else if (known || prevStatusById[source.id]?.lastSuccess) a.published = generatedAt
         else a.published = new Date(now - ++undatedBacklog * 864e5).toISOString()
@@ -188,6 +209,8 @@ async function main() {
     s.count = mine.length
     s.digitalCount = mine.filter((a) => a.digital).length
     s.latest = mine[0]?.published ?? null
+    // A feed can answer and still contribute nothing; say so rather than calling it working.
+    if (s.status === 'ok' && (!s.latest || now - Date.parse(s.latest) > QUIET_DAYS * 864e5)) s.status = 'quiet'
   }
   statuses.sort((a, b) => a.name.localeCompare(b.name))
 
@@ -202,10 +225,18 @@ async function main() {
   }
 
   await mkdir(DATA_DIR, { recursive: true })
-  await writeFile(path.join(DATA_DIR, 'alerts.json'), JSON.stringify({ generatedAt, topics: TOPIC_LABELS, alerts }))
+  await writeFile(path.join(DATA_DIR, 'alerts.json'), JSON.stringify({ generatedAt, schema: SCHEMA, topics: TOPIC_LABELS, alerts }))
   await writeFile(path.join(DATA_DIR, 'sources.json'), JSON.stringify({ generatedAt, sources: statuses }, null, 1))
   const sourcesById = Object.fromEntries(statuses.map((s) => [s.id, s]))
-  await writeFile(path.join(ROOT, 'public', 'feed.xml'), buildRss(alerts.filter((a) => a.digital), sourcesById, generatedAt))
+  const notices = alerts.filter((a) => a.kind !== 'research')
+  await writeFile(path.join(ROOT, 'public', 'feed.xml'), buildRss(notices.filter((a) => a.digital), sourcesById, generatedAt, {
+    title: 'Horizons: medication safety in digital systems',
+    description: 'Medication safety alerts involving digital systems, collated from regulators, safety organisations and standards bodies worldwide.',
+  }))
+  await writeFile(path.join(ROOT, 'public', 'feed-all.xml'), buildRss(notices, sourcesById, generatedAt, {
+    title: 'Horizons: medication safety alerts worldwide',
+    description: 'Medication safety alerts, recalls and guidance collated from regulators, safety organisations and standards bodies worldwide.',
+  }))
 }
 
 main().catch((err) => { console.error(err); process.exit(1) })

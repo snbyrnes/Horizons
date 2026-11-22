@@ -33,13 +33,13 @@ function alertList(items) {
   if (!items.length) return '<p class="lede lede-small">No current alerts. New alerts appear here within six hours of publication.</p>'
   return `<ul class="rows">${items.map((a) => {
     const s = sourceById[a.source]
-    return `<li class="row sev-${a.severity}"><div class="row-head"><span class="row-main"><a class="row-title" href="${esc(a.url)}" rel="noopener"${s.lang !== 'en' ? ` lang="${esc(s.lang)}"` : ''}>${esc(a.title)}</a><span class="row-meta"><span class="sev-tag sev-tag-${a.severity}">${SEV[a.severity]}</span><time datetime="${a.published.slice(0, 10)}">${dateFmt.format(new Date(a.published))}</time>${a.topics.map((t) => `<span class="topic">${esc(alertsFile.topics[t])}</span>`).join('')}</span></span><span class="row-src"><span class="row-org">${esc(s.short)}</span><span class="row-country">${esc(s.country)}</span></span></div></li>`
+    return `<li class="row sev-${a.severity}"><div class="row-head"><span class="row-main"><a class="row-title" href="${esc(a.url)}" rel="noopener"${s.lang !== 'en' ? ` lang="${esc(s.lang)}"` : ''}>${esc(a.title)}</a><span class="row-meta"><span class="sev-tag sev-tag-${a.severity}${a.pclass ? '' : ' sev-est'}">${SEV[a.severity]}</span>${a.pclass ? `<span class="pclass">${esc(a.pclass)}</span>` : ''}<time datetime="${a.published.slice(0, 10)}">${dateFmt.format(new Date(a.published))}</time>${a.topics.map((t) => `<span class="topic">${esc(alertsFile.topics[t])}</span>`).join('')}</span></span><span class="row-src"><span class="row-org">${esc(s.short)}</span><span class="row-country">${esc(s.country)}</span></span></div></li>`
   }).join('')}</ul>`
 }
 
 function browseLinks(up) {
   const topics = Object.values(TOPIC_PAGES).map((t) => `<li><a href="${up}topics/${t.slug}/">${esc(t.name)}</a></li>`).join('')
-  const regions = Object.entries(REGION_PAGES).map(([name, slug]) => `<li><a href="${up}regions/${slug}/">${esc(name === 'Rest of world' ? 'Africa and Latin America' : name)}</a></li>`).join('')
+  const regions = Object.entries(REGION_PAGES).map(([name, slug]) => `<li><a href="${up}regions/${slug}/">${esc(name)}</a></li>`).join('')
   return `<nav class="browse" aria-label="Browse alerts"><div><h2>Digital medication safety topics</h2><ul>${topics}</ul></div><div><h2>Medication safety alerts by region</h2><ul>${regions}</ul></div></nav>`
 }
 
@@ -72,13 +72,14 @@ function page({ up, urlPath, title, description, h1, intro, body, appHref }) {
 <meta name="color-scheme" content="light dark">
 <link rel="icon" type="image/svg+xml" href="${up}favicon.svg">
 <link rel="alternate" type="application/rss+xml" title="Horizons: medication safety in digital systems" href="${up}feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Horizons: all medication safety alerts" href="${up}feed-all.xml">
 <link rel="stylesheet" href="${up}${cssHref}">
 <script>try{var t=localStorage.getItem('horizon.theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>
 </head>
 <body>
 <header class="masthead"><div class="wrap masthead-in">
-<a class="brand" href="${up}"><span class="brand-name">Horizons</span><span class="brand-tag">Medication safety alerts, worldwide</span></a>
+<a class="brand" href="${up}"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 20a9 9 0 0 1 18 0" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><path d="M3 25h26" class="logo-line" stroke-width="2.8" stroke-linecap="round"/></svg><span class="brand-name">Horizons</span><span class="brand-tag">Medication safety alerts, worldwide</span></a>
 <nav aria-label="Main"><a href="${up}">Alerts</a><a href="${up}#/sources">Sources</a><a href="${up}#/method">How it works</a><a href="${up}#/feedback">Feedback</a></nav>
 </div></header>
 <main class="wrap"><article class="page">
@@ -111,7 +112,7 @@ for (const [id, t] of Object.entries(TOPIC_PAGES)) {
     title: `${t.name}: medication safety alerts | Horizons`,
     description: `Latest medication safety alerts, recalls and guidance about ${t.about}, collated from regulators and safety organisations worldwide. Updated every six hours.`,
     h1: `${t.name}: medication safety alerts`,
-    intro: `Safety alerts, recalls, investigations and guidance about ${esc(t.about)}, gathered from regulators, safety organisations and standards bodies in ${countries} countries and regions.`,
+    intro: `Safety alerts, recalls, investigations and guidance about ${esc(t.about)}, gathered from regulators, safety organisations and healthcare bodies in ${countries} countries and regions.`,
     body: alertList(items),
     appHref: `../../#/?lens=digital&range=all&topic=${id}`,
   }))
@@ -119,7 +120,7 @@ for (const [id, t] of Object.entries(TOPIC_PAGES)) {
 }
 
 for (const [region, slug] of Object.entries(REGION_PAGES)) {
-  const label = region === 'Rest of world' ? 'Africa and Latin America' : region
+  const label = region
   const items = notices.filter((a) => sourceById[a.source].region === region).slice(0, 60)
   const orgs = sourcesFile.sources.filter((s) => s.region === region && s.count).map((s) => s.short)
   const urlPath = `regions/${slug}/`
@@ -141,7 +142,7 @@ const latest = notices.slice(0, 40)
 const digital = notices.filter((a) => a.digital).slice(0, 15)
 const snapshot = `<div class="wrap"><article class="page">
 <h1>Medication safety alerts from around the world</h1>
-<p class="lede">Horizons collates medication safety alerts, recalls and guidance from ${sourcesFile.sources.length} feeds published by regulators, safety organisations, healthcare bodies and standards bodies in ${countries} countries and regions, and highlights the ones that involve digital systems such as ePrescribing, electronic health records, infusion pumps and dispensing automation. Updated ${updated}.</p>
+<p class="lede">Horizons collates medication safety alerts, recalls and guidance from ${sourcesFile.sources.length} feeds published by regulators, safety organisations and healthcare bodies in ${countries} countries and regions, and highlights the ones that involve digital systems such as ePrescribing, electronic health records, infusion pumps and dispensing automation. Updated ${updated}.</p>
 <h2>Latest alerts involving digital systems</h2>
 ${alertList(digital)}
 <h2>Latest medication safety alerts</h2>

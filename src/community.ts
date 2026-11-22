@@ -24,6 +24,7 @@ export const NOT_INCLUDED: { name: string; country: string; reason: string }[] =
   { name: 'Australian Digital Health Agency', country: 'Australia', reason: 'The site did not answer automated requests when we checked.' },
   { name: 'Safer Care Victoria safety alerts', country: 'Australia', reason: 'The site did not answer automated requests when we checked.' },
   { name: 'SA Health medication safety alerts and notices', country: 'Australia', reason: 'Refuses automated readers (access denied).' },
+  { name: 'Hong Kong Drug Office', country: 'Hong Kong', reason: 'Readable, but its safety news re-posts notices from regulators we already read directly, and we could not separate out its own notices.' },
   { name: 'CDSCO and the Pharmacovigilance Programme of India', country: 'India', reason: 'Connections timed out or returned server errors.' },
   { name: 'ANVISA health alerts', country: 'Brazil', reason: 'The alerts service refuses automated readers and the public page is drawn in the browser.' },
   { name: 'International Medical Device Regulators Forum (IMDRF)', country: 'International', reason: 'The site did not answer automated requests when we checked.' },

@@ -33,10 +33,17 @@ export const adapters = {
     const to = ymd(new Date()).replaceAll('-', '')
     const search = `report_date:[${from}+TO+${to}]${feed.search ? `+AND+${feed.search}` : ''}`
     const data = await openFdaGet(`https://api.fda.gov/drug/enforcement.json?search=${search}&sort=report_date:desc&limit=${feed.limit ?? 100}`)
-    return (data.results ?? []).map((r) => ({
-      title: `${r.classification ?? 'Recall'}: ${toPlain(r.product_description, 150)}`,
+    // One recall event can list many products; show it once.
+    const events = new Map()
+    for (const r of data.results ?? []) {
+      const key = r.event_id ?? r.recall_number
+      if (!events.has(key)) events.set(key, { first: r, count: 0 })
+      events.get(key).count++
+    }
+    return [...events.values()].map(({ first: r, count }) => ({
+      title: `${r.classification ?? 'Recall'}: ${toPlain(r.product_description, 150)}${count > 1 ? ` (and ${count - 1} more ${count === 2 ? 'product' : 'products'})` : ''}`,
       url: `https://www.accessdata.fda.gov/scripts/ires/index.cfm?Event=${encodeURIComponent(r.event_id ?? '')}`,
-      key: r.recall_number,
+      key: r.event_id ?? r.recall_number,
       date: r.report_date,
       summary: `${r.recalling_firm}. Reason: ${r.reason_for_recall}`,
     }))
@@ -61,6 +68,8 @@ export const adapters = {
     const orgs = new Set(feed.organizations)
     return data
       .filter((r) => orgs.has(r.Organization))
+      // Veterinary products, disinfectants and cosmetics share this dataset.
+      .filter((r) => !/veterinar|disinfect|cosmetic|cleaner/i.test(`${r.Category ?? ''} ${r.Title ?? ''}`))
       .slice(0, feed.limit ?? 250)
       .map((r) => ({
         title: r['Recall class'] ? `${r.Title} (${r['Recall class']})` : r.Title,

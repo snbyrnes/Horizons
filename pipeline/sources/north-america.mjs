@@ -23,7 +23,7 @@ export const NORTH_AMERICA = [
     type: 'regulator',
     home: 'https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications',
     dayFirst: false,
-    hints: { kind: 'alert', minSeverity: 'advisory' },
+    hints: { kind: 'alert', minSeverity: 'advisory', publisherClass: 'Drug Safety Communication' },
     feeds: [{ adapter: 'html', url: 'https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications', select: FDA_TABLE }],
   },
   {
@@ -38,7 +38,7 @@ export const NORTH_AMERICA = [
     dayFirst: false,
     filter: 'medication',
     feeds: [
-      { adapter: 'html', url: 'https://www.fda.gov/medical-devices/medical-device-safety/medical-device-recalls-and-early-alerts', select: { ...FDA_TABLE, summary: 'td:nth-child(3)' }, hints: { kind: 'recall' } },
+      { adapter: 'html', url: 'https://www.fda.gov/medical-devices/medical-device-safety/medical-device-recalls-and-early-alerts', select: { ...FDA_TABLE, summary: 'td:nth-child(3)' }, hints: { kind: 'recall' }, exclude: 'pH monitoring|endoscop' },
       { adapter: 'html', url: 'https://www.fda.gov/medical-devices/medical-device-safety/safety-communications', select: { ...FDA_TABLE, summary: 'td:nth-child(3)' }, hints: { kind: 'alert' } },
     ],
   },
@@ -50,7 +50,7 @@ export const NORTH_AMERICA = [
     region,
     type: 'regulator',
     home: 'https://open.fda.gov/apis/drug/enforcement/',
-    hints: { kind: 'recall', minSeverity: 'critical' },
+    hints: { kind: 'recall' },
     feeds: [{ adapter: 'openfda', search: 'classification:%22Class+I%22', days: 365, limit: 100 }],
   },
   {
@@ -77,8 +77,8 @@ export const NORTH_AMERICA = [
     home: 'https://home.ecri.org/pages/ismp',
     feeds: [
       { url: 'https://home.ecri.org/blogs/guidance-insights-tools/tagged/medication-safety.atom' },
-      { url: 'https://home.ecri.org/blogs/guidance-insights-tools.atom', filter: 'medication' },
-      { url: 'https://home.ecri.org/blogs/ecri-news.atom', filter: 'medication', exclude: 'award|webinar|appoint|names ' },
+      { url: 'https://home.ecri.org/blogs/guidance-insights-tools.atom', filter: 'medication-only' },
+      { url: 'https://home.ecri.org/blogs/ecri-news.atom', filter: 'medication-only', exclude: 'award|webinar|appoint|names ' },
     ],
   },
   {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { loadDataset, timeAgo, type Dataset } from './data'
+import { loadDataset, type Dataset } from './data'
 import { Feed } from './Feed'
 import { Sources } from './Sources'
 import { Method } from './Method'
@@ -128,8 +128,7 @@ export default function App() {
           your organisation's alerting process.
         </p>
         <p>
-          {data && <>Data refreshed {timeAgo(data.generatedAt, now)}. </>}
-          <a href="./feed.xml">RSS feed of digital-system alerts</a>
+          RSS feeds: <a href="./feed.xml">digital-system alerts</a>, <a href="./feed-all.xml">all alerts</a>
           <span aria-hidden="true"> | </span>
           <a href="./data/alerts.json">Download the data (JSON)</a>
           <span aria-hidden="true"> | </span>
@@ -148,7 +147,7 @@ export default function App() {
             <h2>Medication safety alerts by region</h2>
             <ul>
               {Object.entries(staticPages.regions).map(([name, slug]) => (
-                <li key={slug}><a href={`./regions/${slug}/`}>{name === 'Rest of world' ? 'Africa and Latin America' : name}</a></li>
+                <li key={slug}><a href={`./regions/${slug}/`}>{name}</a></li>
               ))}
             </ul>
           </div>
