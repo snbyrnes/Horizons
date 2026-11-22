@@ -85,7 +85,7 @@ async function collect(source, now) {
 function notRepeat() {
   const seen = new Map()
   return (a) => {
-    const key = a.title.toLowerCase().replace(/[^p{L}p{N}]+/gu, '')
+    const key = a.title.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '')
     if (key.length < 30) return true
     const t = Date.parse(a.published)
     const prev = seen.get(key)
